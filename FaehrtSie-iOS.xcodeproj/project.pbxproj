@@ -34,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FAA0272D2A49D1A600339F34 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FAAB40582A49D02900134323 /* FaehrtSie-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FaehrtSie-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAAB405B2A49D02900134323 /* FaehrtSie_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaehrtSie_iOSApp.swift; sourceTree = "<group>"; };
 		FAAB405D2A49D02900134323 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -75,6 +76,7 @@
 		FAAB404F2A49D02900134323 = {
 			isa = PBXGroup;
 			children = (
+				FAA0272D2A49D1A600339F34 /* README.md */,
 				FAAB405A2A49D02900134323 /* FaehrtSie-iOS */,
 				FAAB406C2A49D02E00134323 /* FaehrtSie-iOSTests */,
 				FAAB40762A49D02E00134323 /* FaehrtSie-iOSUITests */,
