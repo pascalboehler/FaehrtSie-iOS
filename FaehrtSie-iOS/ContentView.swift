@@ -17,7 +17,12 @@ struct ContentView: View {
             Button {
                 NotificationHelper.triggerOnTimeNotification(1)
             } label: {
-                Text("Trigger notification")
+                Text("Trigger on time notification")
+            }
+            Button {
+                NotificationHelper.triggerDelayNotification(1, delay: 10)
+            } label: {
+                Text("Trigger delay notification")
             }
         }
         .padding()

@@ -8,11 +8,34 @@
 import SwiftUI
 import UserNotifications
 
+class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDelegate {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        UIApplication.shared.registerForRemoteNotifications()
+        UNUserNotificationCenter.current().delegate = self
+        return true
+    }
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        self.forwardTokenToServer(deviceToken: deviceToken)
+    }
+    
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        print("Remote notifications are unavailable: \(error.localizedDescription)")
+    }
+    
+    func forwardTokenToServer(deviceToken: Data) {
+        let tokenComponents = deviceToken.map { data in String(format: "%02.2hhx", data) }
+        let deviceTokenString = tokenComponents.joined()
+        print(deviceTokenString)
+    }
+}
+
 @main
 struct FaehrtSie_iOSApp: App {
     
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    
     init() {
-        // get the users permission to trigger notifications (for ferry notifications)
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
             if success {
                 print("All set!")
@@ -20,7 +43,6 @@ struct FaehrtSie_iOSApp: App {
                 print(error.localizedDescription)
             }
         }
-        
     }
     
     var body: some Scene {
