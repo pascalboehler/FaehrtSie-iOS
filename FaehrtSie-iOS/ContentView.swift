@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UserNotifications
 
 struct ContentView: View {
     var body: some View {
@@ -13,6 +14,11 @@ struct ContentView: View {
             Text("Ja,")
                 .font(.system(size: 30))
             Text("sie fährt")
+            Button {
+                NotificationHelper.triggerOnTimeNotification(1)
+            } label: {
+                Text("Trigger notification")
+            }
         }
         .padding()
     }
