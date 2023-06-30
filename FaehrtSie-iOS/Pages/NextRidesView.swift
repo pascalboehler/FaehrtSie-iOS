@@ -8,10 +8,15 @@
 import SwiftUI
 
 struct NextRidesView: View {
+    
+    @EnvironmentObject var dataHandler: DataHandler
+    
     var body: some View {
         NavigationStack {
             VStack {
-                Text("Hello, Tour!")
+                ForEach(dataHandler.userJourneys) { item in
+                    JourneyTileView(journey: item)
+                }
             }
             .navigationTitle(Text("Next rides"))
             .toolbar {

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA1E871C2A4F182D0040E1DF /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1E871B2A4F182D0040E1DF /* DataHandler.swift */; };
+		FA1E87202A4F1ABB0040E1DF /* JourneyTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1E871F2A4F1ABB0040E1DF /* JourneyTileView.swift */; };
 		FA4984E42A4D68DE00F683CF /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4984E32A4D68DE00F683CF /* NotificationHelper.swift */; };
 		FA4984E82A4EAB5300F683CF /* SelectJourneyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4984E72A4EAB5300F683CF /* SelectJourneyView.swift */; };
 		FA4984EA2A4EAB9100F683CF /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4984E92A4EAB9100F683CF /* MainTabView.swift */; };
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA1E871B2A4F182D0040E1DF /* DataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHandler.swift; sourceTree = "<group>"; };
+		FA1E871F2A4F1ABB0040E1DF /* JourneyTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyTileView.swift; sourceTree = "<group>"; };
 		FA4984E32A4D68DE00F683CF /* NotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
 		FA4984E72A4EAB5300F683CF /* SelectJourneyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectJourneyView.swift; sourceTree = "<group>"; };
 		FA4984E92A4EAB9100F683CF /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
@@ -85,6 +89,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA1E871A2A4F181C0040E1DF /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				FA1E871B2A4F182D0040E1DF /* DataHandler.swift */,
+			);
+			path = Handlers;
+			sourceTree = "<group>";
+		};
 		FA4984E22A4D68C800F683CF /* Helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +108,7 @@
 		FA4984E52A4EAB2F00F683CF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FA1E871F2A4F1ABB0040E1DF /* JourneyTileView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -134,6 +147,7 @@
 		FAAB405A2A49D02900134323 /* FaehrtSie-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				FA1E871A2A4F181C0040E1DF /* Handlers */,
 				FAE719BB2A4EC34F00F12E2E /* Models */,
 				FA4984E62A4EAB3D00F683CF /* Pages */,
 				FA4984E52A4EAB2F00F683CF /* Views */,
@@ -315,10 +329,12 @@
 				FAE719BA2A4EB83500F12E2E /* NextRidesView.swift in Sources */,
 				FA4984EC2A4EAD2500F683CF /* AccountSettingsView.swift in Sources */,
 				FAAB405E2A49D02900134323 /* ContentView.swift in Sources */,
+				FA1E871C2A4F182D0040E1DF /* DataHandler.swift in Sources */,
 				FAE719BD2A4EC36800F12E2E /* Journey.swift in Sources */,
 				FA4984E82A4EAB5300F683CF /* SelectJourneyView.swift in Sources */,
 				FAAB405C2A49D02900134323 /* FaehrtSie_iOSApp.swift in Sources */,
 				FA4984EA2A4EAB9100F683CF /* MainTabView.swift in Sources */,
+				FA1E87202A4F1ABB0040E1DF /* JourneyTileView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

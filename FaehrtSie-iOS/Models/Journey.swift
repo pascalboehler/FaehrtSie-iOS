@@ -7,22 +7,22 @@
 
 import Foundation
 
-enum Vehicle: String {
+public enum Vehicle: String {
     case Ferry = "Ferry"
     case Bus = "Bus"
     case SBahn = "SBahn"
     case Express = "Express"
 }
 
-struct Journey: Identifiable {
-    var id: Int
-    var name: String
-    var departurTime: Date
-    var arrivalTime: Date
-    var vehicleType: Vehicle
-    var vehicleId: Int // line ID
-    var startStation: String
-    var endStation: String
-    var isDelayed: Bool
-    var delay: Int // delay in minutes!
+public struct Journey: Identifiable {
+    public var id: Int
+    public var name: String
+    public var departurTime: Date
+    public var arrivalTime: Date
+    public var vehicleType: Vehicle
+    public var vehicleId: Int // line ID
+    public var startStation: String
+    public var endStation: String
+    public var isDelayed: Bool
+    public var delay: Int // delay in minutes!
 }
