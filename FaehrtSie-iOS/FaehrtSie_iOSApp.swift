@@ -15,6 +15,8 @@ class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDele
         return true
     }
     
+    // App Delegate: Init for push notification provider
+    
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         self.forwardTokenToServer(deviceToken: deviceToken)
     }
@@ -36,6 +38,7 @@ struct FaehrtSie_iOSApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
     init() {
+        // ask the user for permission => move to "demo" dialog on first launch
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
             if success {
                 print("All set!")
