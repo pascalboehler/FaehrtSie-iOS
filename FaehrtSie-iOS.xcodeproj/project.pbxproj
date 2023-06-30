@@ -19,6 +19,7 @@
 		FAAB40782A49D02E00134323 /* FaehrtSie_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB40772A49D02E00134323 /* FaehrtSie_iOSUITests.swift */; };
 		FAAB407A2A49D02E00134323 /* FaehrtSie_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB40792A49D02E00134323 /* FaehrtSie_iOSUITestsLaunchTests.swift */; };
 		FAE719BA2A4EB83500F12E2E /* NextRidesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE719B92A4EB83400F12E2E /* NextRidesView.swift */; };
+		FAE719BD2A4EC36800F12E2E /* Journey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE719BC2A4EC36800F12E2E /* Journey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		FAAB40772A49D02E00134323 /* FaehrtSie_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaehrtSie_iOSUITests.swift; sourceTree = "<group>"; };
 		FAAB40792A49D02E00134323 /* FaehrtSie_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaehrtSie_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FAE719B92A4EB83400F12E2E /* NextRidesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextRidesView.swift; sourceTree = "<group>"; };
+		FAE719BC2A4EC36800F12E2E /* Journey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 		FAAB405A2A49D02900134323 /* FaehrtSie-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				FAE719BB2A4EC34F00F12E2E /* Models */,
 				FA4984E62A4EAB3D00F683CF /* Pages */,
 				FA4984E52A4EAB2F00F683CF /* Views */,
 				FA4984E22A4D68C800F683CF /* Helper */,
@@ -168,6 +171,14 @@
 				FAAB40792A49D02E00134323 /* FaehrtSie_iOSUITestsLaunchTests.swift */,
 			);
 			path = "FaehrtSie-iOSUITests";
+			sourceTree = "<group>";
+		};
+		FAE719BB2A4EC34F00F12E2E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FAE719BC2A4EC36800F12E2E /* Journey.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,6 +315,7 @@
 				FAE719BA2A4EB83500F12E2E /* NextRidesView.swift in Sources */,
 				FA4984EC2A4EAD2500F683CF /* AccountSettingsView.swift in Sources */,
 				FAAB405E2A49D02900134323 /* ContentView.swift in Sources */,
+				FAE719BD2A4EC36800F12E2E /* Journey.swift in Sources */,
 				FA4984E82A4EAB5300F683CF /* SelectJourneyView.swift in Sources */,
 				FAAB405C2A49D02900134323 /* FaehrtSie_iOSApp.swift in Sources */,
 				FA4984EA2A4EAB9100F683CF /* MainTabView.swift in Sources */,
