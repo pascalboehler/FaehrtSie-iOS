@@ -14,7 +14,7 @@ struct MainTabView: View {
                 .tabItem {
                     Label("Home", systemImage: "ferry.fill")
                 }
-            SelectJourneyView()
+            NextRidesView()
                 .tabItem {
                     Label("Next rides", systemImage: "calendar.day.timeline.left")
                 }

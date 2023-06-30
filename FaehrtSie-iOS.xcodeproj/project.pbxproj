@@ -18,6 +18,7 @@
 		FAAB406E2A49D02E00134323 /* FaehrtSie_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB406D2A49D02E00134323 /* FaehrtSie_iOSTests.swift */; };
 		FAAB40782A49D02E00134323 /* FaehrtSie_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB40772A49D02E00134323 /* FaehrtSie_iOSUITests.swift */; };
 		FAAB407A2A49D02E00134323 /* FaehrtSie_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB40792A49D02E00134323 /* FaehrtSie_iOSUITestsLaunchTests.swift */; };
+		FAE719BA2A4EB83500F12E2E /* NextRidesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE719B92A4EB83400F12E2E /* NextRidesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		FAAB40732A49D02E00134323 /* FaehrtSie-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FaehrtSie-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAAB40772A49D02E00134323 /* FaehrtSie_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaehrtSie_iOSUITests.swift; sourceTree = "<group>"; };
 		FAAB40792A49D02E00134323 /* FaehrtSie_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaehrtSie_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FAE719B92A4EB83400F12E2E /* NextRidesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextRidesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				FA4984E72A4EAB5300F683CF /* SelectJourneyView.swift */,
 				FA4984EB2A4EAD2500F683CF /* AccountSettingsView.swift */,
+				FAE719B92A4EB83400F12E2E /* NextRidesView.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA4984E42A4D68DE00F683CF /* NotificationHelper.swift in Sources */,
+				FAE719BA2A4EB83500F12E2E /* NextRidesView.swift in Sources */,
 				FA4984EC2A4EAD2500F683CF /* AccountSettingsView.swift in Sources */,
 				FAAB405E2A49D02900134323 /* ContentView.swift in Sources */,
 				FA4984E82A4EAB5300F683CF /* SelectJourneyView.swift in Sources */,

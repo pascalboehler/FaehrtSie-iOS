@@ -11,17 +11,9 @@ struct SelectJourneyView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                Text("Hello, Tour!")
+                Text("Hello, there!")
             }
-            .navigationTitle(Text("Next rides"))
-            .toolbar {
-                Button {
-                    print("Huhu")
-                } label: {
-                    Image(systemName: "plus.app")
-                }.padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
-
-            }
+            .navigationTitle(Text("New ride"))
         }
         
     }

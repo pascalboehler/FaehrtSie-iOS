@@ -13,7 +13,7 @@ struct AccountSettingsView: View {
             VStack {
                 Text("Hello, Account!")
             }
-            .navigationTitle(Text("My Account"))
+            .navigationTitle(Text("Add a ride"))
         }
     }
 }
