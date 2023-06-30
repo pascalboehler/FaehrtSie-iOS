@@ -97,6 +97,13 @@
 			path = Handlers;
 			sourceTree = "<group>";
 		};
+		FA1E87212A4F1CF10040E1DF /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		FA4984E22A4D68C800F683CF /* Helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +154,7 @@
 		FAAB405A2A49D02900134323 /* FaehrtSie-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				FA1E87212A4F1CF10040E1DF /* Assets */,
 				FA1E871A2A4F181C0040E1DF /* Handlers */,
 				FAE719BB2A4EC34F00F12E2E /* Models */,
 				FA4984E62A4EAB3D00F683CF /* Pages */,
