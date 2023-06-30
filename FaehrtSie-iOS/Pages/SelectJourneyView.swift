@@ -9,11 +9,19 @@ import SwiftUI
 
 struct SelectJourneyView: View {
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 Text("Hello, Tour!")
             }
             .navigationTitle(Text("Next rides"))
+            .toolbar {
+                Button {
+                    print("Huhu")
+                } label: {
+                    Image(systemName: "plus.app")
+                }.padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
+
+            }
         }
         
     }

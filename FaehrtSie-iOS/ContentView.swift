@@ -10,7 +10,7 @@ import UserNotifications
 
 struct ContentView: View {
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack(spacing: 20) {
                 Text("Ja,")
                     .font(.system(size: 30))

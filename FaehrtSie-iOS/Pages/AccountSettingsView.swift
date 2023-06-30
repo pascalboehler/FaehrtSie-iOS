@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AccountSettingsView: View {
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 Text("Hello, Account!")
             }
