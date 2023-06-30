@@ -23,4 +23,6 @@ struct Journey: Identifiable {
     var vehicleId: Int // line ID
     var startStation: String
     var endStation: String
+    var isDelayed: Bool
+    var delay: Int // delay in minutes!
 }
