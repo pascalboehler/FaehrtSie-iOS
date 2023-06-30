@@ -10,22 +10,26 @@ import UserNotifications
 
 struct ContentView: View {
     var body: some View {
-        VStack(spacing: 20) {
-            Text("Ja,")
-                .font(.system(size: 30))
-            Text("sie fährt")
-            Button {
-                NotificationHelper.triggerOnTimeNotification(1)
-            } label: {
-                Text("Trigger on time notification")
+        NavigationView {
+            VStack(spacing: 20) {
+                Text("Ja,")
+                    .font(.system(size: 30))
+                Text("sie fährt")
+                Button {
+                    NotificationHelper.triggerOnTimeNotification(1)
+                } label: {
+                    Text("Trigger on time notification")
+                }
+                Button {
+                    NotificationHelper.triggerDelayNotification(1, delay: 10)
+                } label: {
+                    Text("Trigger delay notification")
+                }
             }
-            Button {
-                NotificationHelper.triggerDelayNotification(1, delay: 10)
-            } label: {
-                Text("Trigger delay notification")
-            }
+            .padding()
+            .navigationTitle(Text("Ferry"))
         }
-        .padding()
+        
     }
 }
 

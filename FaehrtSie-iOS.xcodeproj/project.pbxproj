@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		FA4984E42A4D68DE00F683CF /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4984E32A4D68DE00F683CF /* NotificationHelper.swift */; };
+		FA4984E82A4EAB5300F683CF /* SelectJourneyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4984E72A4EAB5300F683CF /* SelectJourneyView.swift */; };
+		FA4984EA2A4EAB9100F683CF /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4984E92A4EAB9100F683CF /* MainTabView.swift */; };
+		FA4984EC2A4EAD2500F683CF /* AccountSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4984EB2A4EAD2500F683CF /* AccountSettingsView.swift */; };
 		FAAB405C2A49D02900134323 /* FaehrtSie_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB405B2A49D02900134323 /* FaehrtSie_iOSApp.swift */; };
 		FAAB405E2A49D02900134323 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB405D2A49D02900134323 /* ContentView.swift */; };
 		FAAB40602A49D02D00134323 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAAB405F2A49D02D00134323 /* Assets.xcassets */; };
@@ -36,6 +39,9 @@
 
 /* Begin PBXFileReference section */
 		FA4984E32A4D68DE00F683CF /* NotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
+		FA4984E72A4EAB5300F683CF /* SelectJourneyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectJourneyView.swift; sourceTree = "<group>"; };
+		FA4984E92A4EAB9100F683CF /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		FA4984EB2A4EAD2500F683CF /* AccountSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingsView.swift; sourceTree = "<group>"; };
 		FAA0272D2A49D1A600339F34 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FAAB40582A49D02900134323 /* FaehrtSie-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FaehrtSie-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAAB405B2A49D02900134323 /* FaehrtSie_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaehrtSie_iOSApp.swift; sourceTree = "<group>"; };
@@ -83,6 +89,22 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		FA4984E52A4EAB2F00F683CF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FA4984E62A4EAB3D00F683CF /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				FA4984E72A4EAB5300F683CF /* SelectJourneyView.swift */,
+				FA4984EB2A4EAD2500F683CF /* AccountSettingsView.swift */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
 		FAAB404F2A49D02900134323 = {
 			isa = PBXGroup;
 			children = (
@@ -107,8 +129,11 @@
 		FAAB405A2A49D02900134323 /* FaehrtSie-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				FA4984E62A4EAB3D00F683CF /* Pages */,
+				FA4984E52A4EAB2F00F683CF /* Views */,
 				FA4984E22A4D68C800F683CF /* Helper */,
 				FAAB405B2A49D02900134323 /* FaehrtSie_iOSApp.swift */,
+				FA4984E92A4EAB9100F683CF /* MainTabView.swift */,
 				FAAB405D2A49D02900134323 /* ContentView.swift */,
 				FAAB405F2A49D02D00134323 /* Assets.xcassets */,
 				FAAB40612A49D02D00134323 /* FaehrtSie_iOS.entitlements */,
@@ -273,8 +298,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA4984E42A4D68DE00F683CF /* NotificationHelper.swift in Sources */,
+				FA4984EC2A4EAD2500F683CF /* AccountSettingsView.swift in Sources */,
 				FAAB405E2A49D02900134323 /* ContentView.swift in Sources */,
+				FA4984E82A4EAB5300F683CF /* SelectJourneyView.swift in Sources */,
 				FAAB405C2A49D02900134323 /* FaehrtSie_iOSApp.swift in Sources */,
+				FA4984EA2A4EAB9100F683CF /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
