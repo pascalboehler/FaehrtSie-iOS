@@ -7,7 +7,15 @@
 
 import Foundation
 
-public enum Vehicle: String {
+public struct MoT {
+    public var lineNum: Int
+    public var type: VehicleType
+    public var startPoint: String
+    public var endPoint: String
+    public var iconName: String // insert icon here
+}
+
+public enum VehicleType: String {
     case Ferry = "Ferry"
     case Bus = "Bus"
     case SBahn = "SBahn"
@@ -19,8 +27,7 @@ public struct Journey: Identifiable {
     public var name: String
     public var departurTime: Date
     public var arrivalTime: Date
-    public var vehicleType: Vehicle
-    public var vehicleId: Int // line ID
+    public var mot: MoT
     public var startStation: String
     public var endStation: String
     public var isDelayed: Bool
