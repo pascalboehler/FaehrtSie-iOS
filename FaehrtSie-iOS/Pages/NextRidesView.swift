@@ -13,18 +13,18 @@ struct NextRidesView: View {
     
     var body: some View {
         NavigationStack {
-            VStack {
+            ScrollView {
                 ForEach(dataHandler.userJourneys) { item in
                     JourneyTileView(journey: item)
                 }
             }
+            .padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
             .navigationTitle(Text("Next rides"))
             .toolbar {
                 NavigationLink(destination: SelectJourneyView()) {
                     Image(systemName: "plus.app")
                 }
                 .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
-
             }
         }
     }
@@ -32,6 +32,6 @@ struct NextRidesView: View {
 
 struct NextRidesView_Previews: PreviewProvider {
     static var previews: some View {
-        NextRidesView()
+        NextRidesView().environmentObject(DataHandler())
     }
 }

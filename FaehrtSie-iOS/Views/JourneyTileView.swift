@@ -19,17 +19,18 @@ struct JourneyTileView: View {
                     .font(.system(size: 25))
                 Spacer()
                 Image(systemName: "clock").font(.system(size: 25))
-                    .foregroundColor(!journey.isDelayed ? .green : .primary)
+                    .foregroundColor(!journey.isDelayed ? .green : .black)
                 Text("\(journey.getDepartureTime())")
                     .font(.system(size: 25))
-                    .foregroundColor(!journey.isDelayed ? .green : .primary)
+                    .foregroundColor(!journey.isDelayed ? .green : .black)
             }
+            .foregroundColor(.black)
             .padding(EdgeInsets(top: 10, leading: 15, bottom: -2, trailing: 15))
             HStack { // the part underneath
                 Image("\(journey.mot.iconName)")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 100)
+                    .frame(width: 75)
                 Spacer()
                 VStack(alignment: .leading, content: {
                     HStack {
@@ -55,7 +56,7 @@ struct JourneyTileView: View {
                             .font(.system(size: 20))
                     }
 
-                })
+                }).foregroundColor(.black)
             }
             
             .padding(EdgeInsets(top: 25, leading: 15, bottom: 25, trailing: 15))
@@ -64,7 +65,8 @@ struct JourneyTileView: View {
         }
         .background(Color(UIColor.lightGray))
         .cornerRadius(25.0)
-        .padding()
+        //.padding()
+        .padding(EdgeInsets(top: 10, leading: 15, bottom: 10, trailing: 15))
     }
 }
 
