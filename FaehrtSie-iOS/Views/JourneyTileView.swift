@@ -16,12 +16,12 @@ struct JourneyTileView: View {
         VStack {
             HStack {
                 Text("Monday, \(journey.getDepartureDate())")
-                    .font(.system(size: 25))
+                    .font(.system(size: 22))
                 Spacer()
-                Image(systemName: "clock").font(.system(size: 25))
+                Image(systemName: "clock").font(.system(size: 22))
                     .foregroundColor(!journey.isDelayed ? .green : .black)
                 Text("\(journey.getDepartureTime())")
-                    .font(.system(size: 25))
+                    .font(.system(size: 22))
                     .foregroundColor(!journey.isDelayed ? .green : .black)
             }
             .foregroundColor(.black)
@@ -43,7 +43,7 @@ struct JourneyTileView: View {
                     HStack {
                         Image(systemName: "ellipsis")
                             .scaledToFit()
-                            .frame(width: 25)
+                            .frame(width: 22)
                         Image(systemName: "clock")
                         Text("20 Minutes")
                             .font(.system(size: 15))
@@ -59,7 +59,7 @@ struct JourneyTileView: View {
                 }).foregroundColor(.black)
             }
             
-            .padding(EdgeInsets(top: 25, leading: 15, bottom: 25, trailing: 15))
+            .padding(EdgeInsets(top: 22, leading: 15, bottom: 22, trailing: 15))
             .background(.gray)
             .cornerRadius(25.0)
         }
