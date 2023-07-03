@@ -9,23 +9,50 @@ import SwiftUI
 import UserNotifications
 
 struct ContentView: View {
+    
+    @State var startStation: String = ""
+    @State var selectedStartDate: Date = Date.now
+    
+    @State var endStation: String = ""
+    @State var selectedEndDate: Date = Date.now
+    
+    @State var isDeparture = false
+    
     var body: some View {
         NavigationStack {
-            VStack(spacing: 20) {
-                Text("Ja,")
-                    .font(.system(size: 30))
-                Text("sie fährt")
-                Button {
-                    NotificationHelper.triggerOnTimeNotification(1)
-                } label: {
-                    Text("Trigger on time notification")
+            
+            VStack {
+                VStack {
+                    TextField("From...", text: $startStation)
+                        .padding(EdgeInsets(top: 20, leading: 15, bottom: 5, trailing: 15))
+                    Divider()
+                    TextField("To...", text: $startStation)
+                        .padding(EdgeInsets(top: 5, leading: 15, bottom: 5, trailing: 15))
+                    Divider()
+                    DatePicker("Departure", selection: $selectedStartDate)
+                        .padding(EdgeInsets(top: 5, leading: 15, bottom: 15, trailing: 15))
                 }
-                Button {
-                    NotificationHelper.triggerDelayNotification(1, delay: 10)
-                } label: {
-                    Text("Trigger delay notification")
+                .cornerRadius(25.0)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 14)
+                        .stroke(Color.gray, lineWidth: 2)
+                )
+                .padding(EdgeInsets(top: 0, leading: 10, bottom: 10, trailing: 10))
+                
+                
+                NavigationLink (destination: SelectJourneyView()) {
+                    Text("Find journey")
+                        .foregroundColor(.black)
                 }
+                    .padding(EdgeInsets(top: 15, leading: 30, bottom: 15, trailing: 30))
+                    .background(.gray)
+                    .cornerRadius(14)
+                
             }
+            .padding()
+            
+            Spacer()
+            
             .padding()
             .navigationTitle(Text("Ferry"))
         }

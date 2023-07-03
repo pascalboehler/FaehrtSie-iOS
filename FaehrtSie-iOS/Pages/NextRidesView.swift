@@ -17,15 +17,18 @@ struct NextRidesView: View {
                 ForEach(dataHandler.userJourneys) { item in
                     JourneyTileView(journey: item)
                 }
+                .onDelete { index in
+                    print("hi")
+                }
             }
             .padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
             .navigationTitle(Text("Next rides"))
-            .toolbar {
+            /*.toolbar {
                 NavigationLink(destination: SelectJourneyView()) {
                     Image(systemName: "plus.app")
                 }
                 .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
-            }
+            }*/
         }
     }
 }
