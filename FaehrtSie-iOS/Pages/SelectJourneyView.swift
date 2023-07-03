@@ -21,6 +21,8 @@ struct SelectJourneyView: View {
     
     @Environment (\.dismiss) var dismiss
     
+    @State var isProcessing = false
+    
     var body: some View {
         NavigationStack {
             VStack {
@@ -29,6 +31,10 @@ struct SelectJourneyView: View {
                     ForEach(dataHandler.userJourneys) { item in
                         JourneyTileView(journey: item)
                             .onTapGesture {
+                                if (isProcessing) {
+                                    return
+                                }
+                                isProcessing = true
                                 dataHandler.addJourney(item)
                                 dismiss()
                             }

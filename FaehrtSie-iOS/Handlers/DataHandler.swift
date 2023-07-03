@@ -17,10 +17,19 @@ public class DataHandler : ObservableObject {
     }
     
     public func addJourney(_ journey: Journey) {
+        // TODO: Fix ids
+        let newId = userJourneys.count + 1
+        
+        journey.id = newId
+        
         userJourneys.append(journey)
     }
     
     public func getNextJourney() -> Journey? {
         return self.userJourneys.first
+    }
+    
+    public func getSearchResults() -> [Journey] {
+        return userJourneys
     }
 }
