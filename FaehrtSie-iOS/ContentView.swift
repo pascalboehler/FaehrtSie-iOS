@@ -26,9 +26,15 @@ struct ContentView: View {
                 VStack {
                     VStack {
                         TextField("From...", text: $startStation)
+                            .onTapGesture {
+                                startStation = ""
+                            }
                             .padding(EdgeInsets(top: 20, leading: 15, bottom: 5, trailing: 15))
                         Divider()
                         TextField("To...", text: $endStation)
+                            .onTapGesture {
+                                endStation = ""
+                            }
                             .padding(EdgeInsets(top: 5, leading: 15, bottom: 5, trailing: 15))
                         Divider()
                         DatePicker("Departure", selection: $selectedStartDate)
@@ -44,7 +50,7 @@ struct ContentView: View {
                     
                     NavigationLink (destination: SelectJourneyView()) {
                         Text("Find journey")
-                            .foregroundColor(.primary)
+                            .foregroundColor(.black)
                     }
                     .padding(EdgeInsets(top: 15, leading: 30, bottom: 15, trailing: 30))
                     .background(Color(UIColor.lightGray))

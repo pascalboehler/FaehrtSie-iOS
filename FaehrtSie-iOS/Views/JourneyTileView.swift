@@ -19,10 +19,10 @@ struct JourneyTileView: View {
                     .font(.system(size: 22))
                 Spacer()
                 Image(systemName: "clock").font(.system(size: 22))
-                    .foregroundColor(!journey.isDelayed ? .green : .black)
+                    .foregroundColor(!journey.isDelayed ? .green : .black) // TODO: Find a better green!
                 Text("\(journey.getDepartureTime())")
                     .font(.system(size: 22))
-                    .foregroundColor(!journey.isDelayed ? .green : .black)
+                    .foregroundColor(!journey.isDelayed ? .green : .black) // TODO: Find a better green!
             }
             .foregroundColor(.black)
             .padding(EdgeInsets(top: 10, leading: 15, bottom: -2, trailing: 15))
