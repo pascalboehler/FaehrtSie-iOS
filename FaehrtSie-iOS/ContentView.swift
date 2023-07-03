@@ -26,7 +26,7 @@ struct ContentView: View {
                     TextField("From...", text: $startStation)
                         .padding(EdgeInsets(top: 20, leading: 15, bottom: 5, trailing: 15))
                     Divider()
-                    TextField("To...", text: $startStation)
+                    TextField("To...", text: $endStation)
                         .padding(EdgeInsets(top: 5, leading: 15, bottom: 5, trailing: 15))
                     Divider()
                     DatePicker("Departure", selection: $selectedStartDate)
@@ -42,7 +42,7 @@ struct ContentView: View {
                 
                 NavigationLink (destination: SelectJourneyView()) {
                     Text("Find journey")
-                        .foregroundColor(.black)
+                        .foregroundColor(.primary)
                 }
                     .padding(EdgeInsets(top: 15, leading: 30, bottom: 15, trailing: 30))
                     .background(.gray)
@@ -54,7 +54,7 @@ struct ContentView: View {
             Spacer()
             
             .padding()
-            .navigationTitle(Text("Ferry"))
+            .navigationTitle(Text("Home"))
         }
         
     }
