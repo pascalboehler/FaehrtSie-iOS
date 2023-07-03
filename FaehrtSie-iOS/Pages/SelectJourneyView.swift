@@ -19,6 +19,8 @@ struct SelectJourneyView: View {
     
     @EnvironmentObject var dataHandler: DataHandler
     
+    @Environment (\.dismiss) var dismiss
+    
     var body: some View {
         NavigationStack {
             VStack {
@@ -26,17 +28,14 @@ struct SelectJourneyView: View {
                 ScrollView {
                     ForEach(dataHandler.userJourneys) { item in
                         JourneyTileView(journey: item)
+                            .onTapGesture {
+                                dataHandler.addJourney(item)
+                                dismiss()
+                            }
                     }
-                    .onTapGesture {
-                        print("Hello world")
-                    }
-
                 }
                 .padding(5)
-                
-                                
             }
-            
             .navigationTitle(Text("Results"))
         }
         
