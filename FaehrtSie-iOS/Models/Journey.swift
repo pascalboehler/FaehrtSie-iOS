@@ -68,4 +68,24 @@ public class Journey: Identifiable {
         
         return formattedString
     }
+    
+    public func getArrivalDate() -> String {
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.dateFormat = "dd.MM.yyyy"
+        
+        let formattedString = dateFormatter.string(from: arrivalTime)
+        
+        return formattedString
+    }
+    
+    public func getArrivalTime() -> String {
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.dateFormat = "HH:mm"
+        
+        let formattedString = dateFormatter.string(from: arrivalTime)
+        
+        return formattedString
+    }
 }

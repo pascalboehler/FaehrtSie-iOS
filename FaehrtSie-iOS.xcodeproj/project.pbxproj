@@ -13,6 +13,7 @@
 		FA4984E82A4EAB5300F683CF /* SelectJourneyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4984E72A4EAB5300F683CF /* SelectJourneyView.swift */; };
 		FA4984EA2A4EAB9100F683CF /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4984E92A4EAB9100F683CF /* MainTabView.swift */; };
 		FA4984EC2A4EAD2500F683CF /* AccountSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4984EB2A4EAD2500F683CF /* AccountSettingsView.swift */; };
+		FA4F8BBC2A530731003877C2 /* CurrentJourneyTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4F8BBB2A530731003877C2 /* CurrentJourneyTileView.swift */; };
 		FAAB405C2A49D02900134323 /* FaehrtSie_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB405B2A49D02900134323 /* FaehrtSie_iOSApp.swift */; };
 		FAAB405E2A49D02900134323 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB405D2A49D02900134323 /* ContentView.swift */; };
 		FAAB40602A49D02D00134323 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAAB405F2A49D02D00134323 /* Assets.xcassets */; };
@@ -48,6 +49,7 @@
 		FA4984E72A4EAB5300F683CF /* SelectJourneyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectJourneyView.swift; sourceTree = "<group>"; };
 		FA4984E92A4EAB9100F683CF /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		FA4984EB2A4EAD2500F683CF /* AccountSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingsView.swift; sourceTree = "<group>"; };
+		FA4F8BBB2A530731003877C2 /* CurrentJourneyTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentJourneyTileView.swift; sourceTree = "<group>"; };
 		FAA0272D2A49D1A600339F34 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FAAB40582A49D02900134323 /* FaehrtSie-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FaehrtSie-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAAB405B2A49D02900134323 /* FaehrtSie_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaehrtSie_iOSApp.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				FA1E871F2A4F1ABB0040E1DF /* JourneyTileView.swift */,
+				FA4F8BBB2A530731003877C2 /* CurrentJourneyTileView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA4984E42A4D68DE00F683CF /* NotificationHelper.swift in Sources */,
+				FA4F8BBC2A530731003877C2 /* CurrentJourneyTileView.swift in Sources */,
 				FAE719BA2A4EB83500F12E2E /* NextRidesView.swift in Sources */,
 				FA4984EC2A4EAD2500F683CF /* AccountSettingsView.swift in Sources */,
 				FAAB405E2A49D02900134323 /* ContentView.swift in Sources */,
