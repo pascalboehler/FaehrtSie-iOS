@@ -26,10 +26,14 @@ public class DataHandler : ObservableObject {
     }
     
     public func getNextJourney() -> Journey? {
+        // TODO: Make this time based
         return self.userJourneys.first
     }
     
     public func getSearchResults() -> [Journey] {
+        // TODO: Search the Api for the users journey
+        
+        
         return userJourneys
     }
 }
