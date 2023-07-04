@@ -16,8 +16,10 @@ struct ContentView: View {
         NavigationStack {
             ScrollView {
                 
-                CurrentJourneyTileView(journey: dataHandler.getNextJourney()!)
-                    .padding(EdgeInsets(top: 20, leading: 5, bottom: 10, trailing: 5))
+                if (!dataHandler.userJourneys.isEmpty) {
+                    CurrentJourneyTileView(journey: dataHandler.getNextJourney()!)
+                        .padding(EdgeInsets(top: 20, leading: 5, bottom: 10, trailing: 5))
+                }
                 
                 // TODO: Put this in own view + Add a way to trigger search correctly
                 SearchJourneyTileView()

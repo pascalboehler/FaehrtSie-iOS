@@ -43,7 +43,7 @@ struct SearchJourneyTileView: View {
             .padding(EdgeInsets(top: 0, leading: 10, bottom: 10, trailing: 10))
             
             
-            NavigationLink (destination: SelectJourneyView()) {
+            NavigationLink (destination: SelectJourneyView(startStation: startStation, selectedStartDate: selectedStartDate, endStation: endStation)) {
                 Text("Find journey")
                     .foregroundColor(.black)
             }

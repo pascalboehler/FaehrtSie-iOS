@@ -31,7 +31,7 @@ struct JourneyTileView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 75)
-                Spacer()
+                Spacer().frame(width: 30)
                 VStack(alignment: .leading, content: {
                     HStack {
                         Image(systemName: "mappin.circle.fill")
@@ -45,6 +45,7 @@ struct JourneyTileView: View {
                             .scaledToFit()
                             .frame(width: 22)
                         Image(systemName: "clock")
+                        // TODO: calculate this from dep && arr time
                         Text("20 Minutes")
                             .font(.system(size: 15))
                     }
@@ -57,6 +58,7 @@ struct JourneyTileView: View {
                     }
 
                 }).foregroundColor(.black)
+                Spacer()
             }
             
             .padding(EdgeInsets(top: 22, leading: 15, bottom: 22, trailing: 15))
