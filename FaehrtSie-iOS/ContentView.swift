@@ -23,6 +23,10 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             ScrollView {
+                
+                CurrentJourneyTileView(journey: dataHandler.getNextJourney()!)
+                    .padding(EdgeInsets(top: 20, leading: 5, bottom: 10, trailing: 5))
+                
                 VStack {
                     VStack {
                         TextField("From...", text: $startStation)
@@ -56,10 +60,8 @@ struct ContentView: View {
                     .background(Color(UIColor.lightGray))
                     .cornerRadius(14)
                 }
-                .padding()
+                .padding(EdgeInsets(top: 10, leading: 5, bottom: 10, trailing: 5))
                 
-                CurrentJourneyTileView(journey: dataHandler.getNextJourney()!)
-                    .padding()
             }
             
             .navigationTitle(Text("Home"))

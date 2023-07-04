@@ -19,10 +19,10 @@ struct JourneyTileView: View {
                     .font(.system(size: 22))
                 Spacer()
                 Image(systemName: "clock").font(.system(size: 22))
-                    .foregroundColor(!journey.isDelayed ? .green : .black) // TODO: Find a better green!
+                    //.foregroundColor(!journey.isDelayed ? Color(red: 0.25, green: 0.52, blue: 0.14) : .black)
                 Text("\(journey.getDepartureTime())")
                     .font(.system(size: 22))
-                    .foregroundColor(!journey.isDelayed ? .green : .black) // TODO: Find a better green!
+                    //.foregroundColor(!journey.isDelayed ? Color(red: 0.25, green: 0.52, blue: 0.14) : .black)
             }
             .foregroundColor(.black)
             .padding(EdgeInsets(top: 10, leading: 15, bottom: -2, trailing: 15))
@@ -63,7 +63,7 @@ struct JourneyTileView: View {
             .background(.gray)
             .cornerRadius(25.0)
         }
-        .background(Color(UIColor.lightGray))
+        .background(!journey.isDelayed ? Color(red: 0.94, green: 0.58, blue: 0.25) : Color.red)
         .cornerRadius(25.0)
         //.padding()
         .padding(EdgeInsets(top: 10, leading: 15, bottom: 10, trailing: 15))
@@ -72,6 +72,6 @@ struct JourneyTileView: View {
 
 struct JourneyTileView_Previews: PreviewProvider {
     static var previews: some View {
-        JourneyTileView(journey: Journey(id: 1, name: "hi", departureTime: Date.now, departureStation: "Ernst-August-Schleuse", arrivalTime: Date.now, arrivalStation: "Landungsbrücke", mot: MoT(lineNum: 73, type: .Ferry, startPoint: "Ernst-August-Schleuse", endPoint: "Landungsbrücken", iconName: "Faehre73Logo"), startStation: "Test", endStation: "Huhu", isDelayed: true, delay: 0))
+        JourneyTileView(journey: Journey(id: 1, name: "hi", departureTime: Date.now, departureStation: "Ernst-August-Schleuse", arrivalTime: Date.now, arrivalStation: "Landungsbrücke", mot: MoT(lineNum: 73, type: .Ferry, startPoint: "Ernst-August-Schleuse", endPoint: "Landungsbrücken", iconName: "Faehre73Logo"), startStation: "Test", endStation: "Huhu", isDelayed: false, delay: 0))
     }
 }
