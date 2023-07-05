@@ -52,7 +52,7 @@ struct CurrentJourneyTileView: View {
             HStack {
                 Text("Status: ")
                 Text("\(!journey.isDelayed ? "On Time" : "Delayed \n\(journey.delay) Minutes" )")
-                    .foregroundColor(journey.isDelayed ? .red : Color(red: 0.25, green: 0.52, blue: 0.14)) // TODO: Find a better green! Changed to ForestGreen
+                    .foregroundColor(journey.isDelayed ? .red : Design.greenColor) // TODO: Find a better green! Changed to ForestGreen
                 Spacer()
                 
             }
@@ -88,7 +88,7 @@ struct CurrentJourneyTileView: View {
         }
             .foregroundColor(.black)
             .padding(EdgeInsets(top: 15, leading: 5, bottom: 15, trailing: 5))
-            .background(Color.gray)
+            .background(Design.darkBGColor)
             .cornerRadius(25.0)
             .padding(EdgeInsets(top: 0, leading: 10, bottom: 10, trailing: 10))
     }

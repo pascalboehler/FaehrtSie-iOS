@@ -12,4 +12,5 @@ public struct Design {
     static public let stdCorpColor: Color = Color(red: 0.94, green: 0.58, blue: 0.25) // some orange from the website
     static public let darkBGColor: Color = Color.gray
     static public let lightBGColor: Color = Color(UIColor.lightGray)
+    static public let greenColor: Color = Color(red: 0.25, green: 0.52, blue: 0.14)
 }

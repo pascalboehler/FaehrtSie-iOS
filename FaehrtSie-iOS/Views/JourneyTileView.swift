@@ -62,10 +62,10 @@ struct JourneyTileView: View {
             }
             
             .padding(EdgeInsets(top: 22, leading: 15, bottom: 22, trailing: 15))
-            .background(.gray)
+            .background(Design.darkBGColor)
             .cornerRadius(25.0)
         }
-        .background(!journey.isDelayed ? Color(red: 0.94, green: 0.58, blue: 0.25) : Color.red)
+        .background(!journey.isDelayed ? Design.stdCorpColor : Color.red)
         .cornerRadius(25.0)
         //.padding()
         .padding(EdgeInsets(top: 10, leading: 15, bottom: 10, trailing: 15))
