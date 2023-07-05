@@ -11,6 +11,8 @@ struct CurrentJourneyTileView: View {
     
     //@State var dataHandler.userJourneys.first!: dataHandler.userJourneys.first!
     
+    // MARK: DO NOT CALL THIS WHEN THE userJourneys ARE EMPTY! ALWAYS CHECK BEFORE IF ITS NOT EMPTY!
+    
     @EnvironmentObject var dataHandler: DataHandler
     
     var body: some View {
