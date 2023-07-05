@@ -15,6 +15,7 @@ struct JourneyTileView: View {
     
         VStack {
             HStack {
+                // TODO: Get weekday
                 Text("Monday, \(journey.getDepartureDate())")
                     .font(.system(size: 22))
                 Spacer()

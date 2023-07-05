@@ -27,9 +27,9 @@ public class DataHandler : ObservableObject {
         userJourneys = userJourneys.sorted(by: {$0.departureTime < $1.departureTime})
     }
     
-    public func getNextJourney() -> Journey? {
+    public func getNextJourney() -> Journey {
         // TODO: Make this time based ==> somewhat fixed due to sorting of the list
-        return self.userJourneys.first
+        return self.userJourneys.first!
     }
     
     public func getAllJourneys() -> [Journey] {

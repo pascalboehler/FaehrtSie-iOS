@@ -17,8 +17,11 @@ struct ContentView: View {
             ScrollView {
                 
                 if (!dataHandler.userJourneys.isEmpty) {
-                    CurrentJourneyTileView(journey: dataHandler.getNextJourney()!)
+                    CurrentJourneyTileView()
                         .padding(EdgeInsets(top: 20, leading: 5, bottom: 10, trailing: 5))
+                        .onTapGesture {
+                            print(dataHandler.userJourneys.first!.arrivalTime)
+                        }
                 }
                 
                 // TODO: Put this in own view + Add a way to trigger search correctly
