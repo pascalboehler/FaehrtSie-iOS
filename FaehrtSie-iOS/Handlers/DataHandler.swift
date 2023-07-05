@@ -23,6 +23,8 @@ public class DataHandler : ObservableObject {
         journey.id = newId
         
         userJourneys.append(journey)
+        
+        userJourneys = userJourneys.sorted(by: {$0.departureTime < $1.departureTime})
     }
     
     public func getNextJourney() -> Journey? {
@@ -30,18 +32,15 @@ public class DataHandler : ObservableObject {
         return self.userJourneys.first
     }
     
-    // TODO: Add function to get all journeys sorted by day
-    
     public func getAllJourneys() -> [Journey] {
         
-        let sortedList = userJourneys.sorted(by: {$0.departureTime < $1.departureTime})
-        
-        return sortedList
+        return userJourneys
     }
     
     // TODO: Add function that returns all upcoming journeys sorted by date
     
     public func getUpcomingJourneys() -> [Journey] {
+        
         return []
     }
     
