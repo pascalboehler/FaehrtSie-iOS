@@ -28,7 +28,7 @@ public class DataHandler : ObservableObject {
     }
     
     public func getNextJourney() -> Journey? {
-        // TODO: Make this time based
+        // TODO: Make this time based ==> somewhat fixed due to sorting of the list
         return self.userJourneys.first
     }
     
