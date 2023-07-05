@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA0C4EB12A55608500FA8B90 /* Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0C4EB02A55608500FA8B90 /* Design.swift */; };
 		FA1E871C2A4F182D0040E1DF /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1E871B2A4F182D0040E1DF /* DataHandler.swift */; };
 		FA1E87202A4F1ABB0040E1DF /* JourneyTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1E871F2A4F1ABB0040E1DF /* JourneyTileView.swift */; };
 		FA328A4F2A543B9F00978DB7 /* SearchJourneyTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA328A4E2A543B9F00978DB7 /* SearchJourneyTileView.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA0C4EB02A55608500FA8B90 /* Design.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Design.swift; sourceTree = "<group>"; };
 		FA1E871B2A4F182D0040E1DF /* DataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHandler.swift; sourceTree = "<group>"; };
 		FA1E871F2A4F1ABB0040E1DF /* JourneyTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyTileView.swift; sourceTree = "<group>"; };
 		FA328A4E2A543B9F00978DB7 /* SearchJourneyTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchJourneyTileView.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 		FAAB405A2A49D02900134323 /* FaehrtSie-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				FA0C4EB02A55608500FA8B90 /* Design.swift */,
 				FA1E871A2A4F181C0040E1DF /* Handlers */,
 				FAE719BB2A4EC34F00F12E2E /* Models */,
 				FA4984E62A4EAB3D00F683CF /* Pages */,
@@ -341,6 +344,7 @@
 				FAE719BD2A4EC36800F12E2E /* Journey.swift in Sources */,
 				FA4984E82A4EAB5300F683CF /* SelectJourneyView.swift in Sources */,
 				FAAB405C2A49D02900134323 /* FaehrtSie_iOSApp.swift in Sources */,
+				FA0C4EB12A55608500FA8B90 /* Design.swift in Sources */,
 				FA4984EA2A4EAB9100F683CF /* MainTabView.swift in Sources */,
 				FA1E87202A4F1ABB0040E1DF /* JourneyTileView.swift in Sources */,
 			);
