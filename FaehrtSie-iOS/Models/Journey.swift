@@ -22,7 +22,7 @@ public enum VehicleType: String {
     case Express = "Express"
 }
 
-public class Journey: Identifiable {
+public class Journey: Identifiable, ObservableObject {
     public var id: Int
     public var name: String
     public var departureTime: Date

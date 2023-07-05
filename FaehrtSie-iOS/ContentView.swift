@@ -17,7 +17,7 @@ struct ContentView: View {
             ScrollView {
                 
                 if (!dataHandler.userJourneys.isEmpty) {
-                    CurrentJourneyTileView()
+                    CurrentJourneyTileView(journey: dataHandler.getNextJourney())
                         .padding(EdgeInsets(top: 20, leading: 5, bottom: 10, trailing: 5))
                         .onTapGesture {
                             print(dataHandler.userJourneys.first!.arrivalTime)

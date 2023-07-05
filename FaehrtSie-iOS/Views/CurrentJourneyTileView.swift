@@ -1,5 +1,5 @@
 //
-//  CurrentdataHandler.userJourneys.first!TileView.swift
+//  CurrentjourneyTileView.swift
 //  FaehrtSie-iOS
 //
 //  Created by Pascal Böhler on 03.07.23.
@@ -9,11 +9,11 @@ import SwiftUI
 
 struct CurrentJourneyTileView: View {
     
-    //@State var dataHandler.userJourneys.first!: dataHandler.userJourneys.first!
+    @ObservedObject var journey: Journey
     
     // MARK: DO NOT CALL THIS WHEN THE userJourneys ARE EMPTY! ALWAYS CHECK BEFORE IF ITS NOT EMPTY!
     
-    @EnvironmentObject var dataHandler: DataHandler
+    //@EnvironmentObject var dataHandler: DataHandler
     
     var body: some View {
         VStack {
@@ -25,14 +25,14 @@ struct CurrentJourneyTileView: View {
                 
                 Spacer()
                 
-                Image(systemName: "\(dataHandler.userJourneys.first!.mot.type.rawValue.lowercased())")
+                Image(systemName: "\(journey.mot.type.rawValue.lowercased())")
                     .resizable()
                     .scaledToFit()
                     .frame(height: 100)
                 
                 Spacer()
                 
-                Image(dataHandler.userJourneys.first!.mot.iconName)
+                Image(journey.mot.iconName)
                     .resizable()
                     .scaledToFit()
                     .frame(height: 75)
@@ -43,20 +43,20 @@ struct CurrentJourneyTileView: View {
                 .padding(EdgeInsets(top: 5, leading: 15, bottom: 10, trailing: 15))
             
             HStack {
-                Text("Monday, \(dataHandler.userJourneys.first!.getDepartureDate())")
+                Text("Monday, \(journey.getDepartureDate())")
                     .font(.system(size: 22))
                 Spacer()
                 Image(systemName: "clock").font(.system(size: 22))
-                    //.foregroundColor(!dataHandler.userJourneys.first!.isDelayed ? .green : .black)
-                Text("\(dataHandler.userJourneys.first!.getDepartureTime())")
+                    //.foregroundColor(!journey.isDelayed ? .green : .black)
+                Text("\(journey.getDepartureTime())")
                     .font(.system(size: 22))
-                    //.foregroundColor(!dataHandler.userJourneys.first!.isDelayed ? .green : .black)
+                    //.foregroundColor(!journey.isDelayed ? .green : .black)
             }
                 .padding(EdgeInsets(top: 10, leading: 15, bottom: 5, trailing: 15))
             HStack {
                 Text("Status: ")
-                Text("\(!dataHandler.userJourneys.first!.isDelayed ? "On Time" : "Delayed \n\(dataHandler.userJourneys.first!.delay) Minutes" )")
-                    .foregroundColor(dataHandler.userJourneys.first!.isDelayed ? .red : Design.greenColor) // TODO: Find a better green! Changed to ForestGreen
+                Text("\(!journey.isDelayed ? "On Time" : "Delayed \n\(journey.delay) Minutes" )")
+                    .foregroundColor(journey.isDelayed ? .red : Design.greenColor) // TODO: Find a better green! Changed to ForestGreen
                 Spacer()
                 
             }
@@ -66,7 +66,7 @@ struct CurrentJourneyTileView: View {
             VStack {
                 HStack {
                     Image(systemName: "mappin.circle.fill")
-                    Text("\(dataHandler.userJourneys.first!.departureStation) at \(dataHandler.userJourneys.first!.getDepartureTime())")
+                    Text("\(journey.departureStation) at \(journey.getDepartureTime())")
                     Spacer()
                 }
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
@@ -82,7 +82,7 @@ struct CurrentJourneyTileView: View {
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
                 HStack {
                     Image(systemName: "flag.checkered.circle.fill")
-                    Text("\(dataHandler.userJourneys.first!.arrivalStation) at \(dataHandler.userJourneys.first!.getArrivalTime())")
+                    Text("\(journey.arrivalStation) at \(journey.getArrivalTime())")
                     Spacer()
                 }
             }
@@ -100,6 +100,7 @@ struct CurrentJourneyTileView: View {
 
 struct CurrentJourneyTileView_Previews: PreviewProvider {
     static var previews: some View {
-        CurrentJourneyTileView().environmentObject(DataHandler())
+        //CurrentJourneyTileView().environmentObject(DataHandler())
+        CurrentJourneyTileView(journey: Journey(id: 2, name: "test", departureTime: Date.now, departureStation: "Landungsbrücken", arrivalTime: Date.now, arrivalStation: "Ernst-August-Schleuse", mot: MoT(lineNum: 73, type: .Ferry, startPoint: "Landungsbrücken", endPoint: "Ernst-August-Schleuse", iconName: "Faehre73Logo"), startStation: "Test", endStation: "Huhu", isDelayed: true, delay: 10))
     }
 }
