@@ -24,7 +24,6 @@ struct ContentView: View {
                         }
                 }
                 
-                // TODO: Put this in own view + Add a way to trigger search correctly
                 SearchJourneyTileView()
                     .padding(EdgeInsets(top: 10, leading: 5, bottom: 10, trailing: 5))
                 

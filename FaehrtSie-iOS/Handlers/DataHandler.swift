@@ -17,7 +17,6 @@ public class DataHandler : ObservableObject {
     }
     
     public func addJourney(_ journey: Journey) {
-        // TODO: Fix ids
         let newId = userJourneys.count + 1
         
         journey.id = newId

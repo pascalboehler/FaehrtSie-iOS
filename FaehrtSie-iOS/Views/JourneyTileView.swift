@@ -20,10 +20,8 @@ struct JourneyTileView: View {
                     .font(.system(size: 22))
                 Spacer()
                 Image(systemName: "clock").font(.system(size: 22))
-                    //.foregroundColor(!journey.isDelayed ? Color(red: 0.25, green: 0.52, blue: 0.14) : .black)
                 Text("\(journey.getDepartureTime())")
                     .font(.system(size: 22))
-                    //.foregroundColor(!journey.isDelayed ? Color(red: 0.25, green: 0.52, blue: 0.14) : .black)
             }
             .foregroundColor(.black)
             .padding(EdgeInsets(top: 10, leading: 15, bottom: -2, trailing: 15))
@@ -68,7 +66,6 @@ struct JourneyTileView: View {
         }
         .background(!journey.isDelayed ? Design.stdCorpColor : Color.red)
         .cornerRadius(25.0)
-        //.padding()
         .padding(EdgeInsets(top: 10, leading: 15, bottom: 10, trailing: 15))
     }
 }

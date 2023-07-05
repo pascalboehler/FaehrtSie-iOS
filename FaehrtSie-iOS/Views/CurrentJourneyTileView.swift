@@ -11,10 +11,6 @@ struct CurrentJourneyTileView: View {
     
     @ObservedObject var journey: Journey
     
-    // MARK: DO NOT CALL THIS WHEN THE userJourneys ARE EMPTY! ALWAYS CHECK BEFORE IF ITS NOT EMPTY!
-    
-    //@EnvironmentObject var dataHandler: DataHandler
-    
     var body: some View {
         VStack {
             Text("Your next trip")
@@ -47,10 +43,8 @@ struct CurrentJourneyTileView: View {
                     .font(.system(size: 22))
                 Spacer()
                 Image(systemName: "clock").font(.system(size: 22))
-                    //.foregroundColor(!journey.isDelayed ? .green : .black)
                 Text("\(journey.getDepartureTime())")
                     .font(.system(size: 22))
-                    //.foregroundColor(!journey.isDelayed ? .green : .black)
             }
                 .padding(EdgeInsets(top: 10, leading: 15, bottom: 5, trailing: 15))
             HStack {
@@ -100,7 +94,6 @@ struct CurrentJourneyTileView: View {
 
 struct CurrentJourneyTileView_Previews: PreviewProvider {
     static var previews: some View {
-        //CurrentJourneyTileView().environmentObject(DataHandler())
         CurrentJourneyTileView(journey: Journey(id: 2, name: "test", departureTime: Date.now, departureStation: "Landungsbrücken", arrivalTime: Date.now, arrivalStation: "Ernst-August-Schleuse", mot: MoT(lineNum: 73, type: .Ferry, startPoint: "Landungsbrücken", endPoint: "Ernst-August-Schleuse", iconName: "Faehre73Logo"), startStation: "Test", endStation: "Huhu", isDelayed: true, delay: 10))
     }
 }
