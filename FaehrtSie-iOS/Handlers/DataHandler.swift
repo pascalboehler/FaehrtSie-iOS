@@ -32,7 +32,18 @@ public class DataHandler : ObservableObject {
     
     // TODO: Add function to get all journeys sorted by day
     
+    public func getAllJourneys() -> [Journey] {
+        
+        let sortedList = userJourneys.sorted(by: {$0.departureTime < $1.departureTime})
+        
+        return sortedList
+    }
+    
     // TODO: Add function that returns all upcoming journeys sorted by date
+    
+    public func getUpcomingJourneys() -> [Journey] {
+        return []
+    }
     
     public func getSearchResults(startStation: String, endStation: String, selectedStartDate: Date) -> [Journey] {
         // TODO: Search the Api for the users journey

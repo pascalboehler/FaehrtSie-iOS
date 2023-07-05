@@ -14,7 +14,7 @@ struct NextRidesView: View {
     var body: some View {
         NavigationStack {
             ScrollView {
-                ForEach(dataHandler.userJourneys) { item in
+                ForEach(dataHandler.getAllJourneys()) { item in
                     JourneyTileView(journey: item)
                 }
                 .onDelete { index in
