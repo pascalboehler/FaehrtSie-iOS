@@ -38,7 +38,7 @@ struct SearchJourneyTileView: View {
             .cornerRadius(25.0)
             .overlay(
                 RoundedRectangle(cornerRadius: 14)
-                    .stroke(Color.gray, lineWidth: 2)
+                    .stroke(Color(red: 0.94, green: 0.58, blue: 0.25), lineWidth: 2)
             )
             .padding(EdgeInsets(top: 0, leading: 10, bottom: 10, trailing: 10))
             
@@ -48,7 +48,7 @@ struct SearchJourneyTileView: View {
                     .foregroundColor(.black)
             }
             .padding(EdgeInsets(top: 15, leading: 30, bottom: 15, trailing: 30))
-            .background(Color(UIColor.lightGray))
+            .background(Color(red: 0.94, green: 0.58, blue: 0.25))
             .cornerRadius(14)
         }
     }
