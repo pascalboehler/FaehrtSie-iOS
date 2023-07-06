@@ -68,8 +68,8 @@ struct SelectJourneyView: View {
             })
             .navigationTitle(Text("Results"))
         }.onAppear {
-            networkHandler.getScheduleForCurrentDay()
-            //networkHandler.searchForJourney(selectedStartDate, stationDep: startStation, stationArr: endStation)
+            //networkHandler.getScheduleForCurrentDay()
+            networkHandler.searchForJourney(selectedStartDate, stationDep: startStation, stationArr: endStation)
         }
         
     }

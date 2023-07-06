@@ -25,7 +25,9 @@ public class NetworkHandler : ObservableObject {
         self.isFetching = true
         var searchResultJourneys: [Journey] = []
         
-        let urlString = "\(baseURL)/data/getSchedule?unix=\(date.timeIntervalSince1970)&date=\(Utility.convertDateToString(date))&time=\(Utility.convertDateTimeToString(date))&offset=120&station=\(stationDep)"
+        let urlString = "\(baseURL)/data/getScheduleFor?unix=\(Int(date.timeIntervalSince1970))&date=\(Utility.convertDateToString(date))&time=\(Utility.convertDateTimeToString(date))&offset=120&depStation=\(stationDep)&arrStation=\(stationArr)"
+        
+        print(urlString)
         
         guard let fullURL = URL(string: urlString) else {
             self.isFetching = false
@@ -45,7 +47,7 @@ public class NetworkHandler : ObservableObject {
                 for departure in dataDecoded.departures {
                     let departureDate = Date(timeIntervalSince1970: departure)
                     let arrivalDate = departureDate.addingTimeInterval(1200) // MARK: Estimation of how long the ferry needs between the two stops
-                    let journeyToAdd = Journey(name: "RESULT", departureTime: departureDate, departureStation: stationDep, arrivalTime: arrivalDate, arrivalStation: stationArr, mot: MoT(lineNum: 73, type: .Ferry, startPoint: stationDep, endPoint: stationArr, iconName: "Faehre73Icon"), isDelayed: false, delay: 0)
+                    let journeyToAdd = Journey(name: "RESULT", departureTime: departureDate, departureStation: stationDep, arrivalTime: arrivalDate, arrivalStation: stationArr, mot: MoT(lineNum: 73, type: .Ferry, startPoint: stationDep, endPoint: stationArr, iconName: "Faehre73Logo"), isDelayed: false, delay: 0)
                     
                     searchResultJourneys.append(journeyToAdd)
                 }
