@@ -25,7 +25,7 @@ public class NetworkHandler : ObservableObject {
         
         var searchResultJourneys: [Journey] = []
         
-        let urlString = "\(baseURL)/data/getSchedule?unix=\(date.timeIntervalSince1970)&date=\(Utility.convertDateToString(date))&time=\(Utility.convertDateTimeToString(date))&station=\(stationDep)"
+        let urlString = "\(baseURL)/data/getSchedule?unix=\(date.timeIntervalSince1970)&date=\(Utility.convertDateToString(date))&time=\(Utility.convertDateTimeToString(date))&offset=240&station=\(stationDep)"
         
         guard let fullURL = URL(string: urlString) else {
             self.isFetching = false
