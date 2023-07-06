@@ -18,17 +18,30 @@ struct SelectJourneyView: View {
     @State var isDeparture = false
     
     @EnvironmentObject var dataHandler: DataHandler
+    @ObservedObject var networkHandler: NetworkHandler = NetworkHandler()
     
     @Environment (\.dismiss) var dismiss
     
     @State var isProcessing = false
+    
+    init() {
+        
+    }
+    
+    init(startStation: String, selectedStartDate: Date, endStation: String) {
+        self.startStation = startStation
+        self.selectedStartDate = selectedStartDate
+        self.endStation = endStation
+        
+        networkHandler.searchForJourney()
+    }
     
     var body: some View {
         NavigationStack {
             VStack {
                 
                 ScrollView {
-                    ForEach(dataHandler.getSearchResults(startStation: startStation, endStation: endStation, selectedStartDate: selectedStartDate)) { item in
+                    ForEach(networkHandler.searchResults) { item in
                         JourneyTileView(journey: item)
                             .onTapGesture {
                                 if (isProcessing) {

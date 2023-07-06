@@ -17,6 +17,8 @@ struct SearchJourneyTileView: View {
     
     @State var isDeparture = false
     
+    @EnvironmentObject var networkHandler: NetworkHandler
+    
     var body: some View {
         VStack {
             VStack {
@@ -25,12 +27,14 @@ struct SearchJourneyTileView: View {
                         startStation = ""
                     }
                     .padding(EdgeInsets(top: 20, leading: 15, bottom: 5, trailing: 15))
+                //Text("Ernst-August-Schleuse")
                 Divider()
                 TextField("To...", text: $endStation)
                     .onTapGesture {
                         endStation = ""
                     }
                     .padding(EdgeInsets(top: 5, leading: 15, bottom: 5, trailing: 15))
+                
                 Divider()
                 DatePicker("Departure", selection: $selectedStartDate)
                     .padding(EdgeInsets(top: 5, leading: 15, bottom: 15, trailing: 15))
@@ -42,7 +46,7 @@ struct SearchJourneyTileView: View {
             )
             .padding(EdgeInsets(top: 0, leading: 10, bottom: 10, trailing: 10))
             
-            
+            // FIXME: API is called before this Link is activated => should not happen!!!
             NavigationLink (destination: SelectJourneyView(startStation: startStation, selectedStartDate: selectedStartDate, endStation: endStation)) {
                 Text("Find journey")
                     .foregroundColor(.black)
@@ -56,6 +60,6 @@ struct SearchJourneyTileView: View {
 
 struct SearchJourneyTileView_Previews: PreviewProvider {
     static var previews: some View {
-        SearchJourneyTileView()
+        SearchJourneyTileView().environmentObject(NetworkHandler())
     }
 }

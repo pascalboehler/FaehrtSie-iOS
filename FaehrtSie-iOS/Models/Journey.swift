@@ -28,21 +28,17 @@ public class Journey: Identifiable, ObservableObject {
     public var departureTime: Date
     public var arrivalTime: Date
     public var mot: MoT
-    public var startStation: String
-    public var endStation: String
     public var isDelayed: Bool
     public var delay: Int // delay in minutes!
     public var departureStation: String
     public var arrivalStation: String
     
-    public init(id: Int, name: String, departureTime: Date, departureStation: String, arrivalTime: Date, arrivalStation: String, mot: MoT, startStation: String, endStation: String, isDelayed: Bool, delay: Int) {
+    public init(id: Int, name: String, departureTime: Date, departureStation: String, arrivalTime: Date, arrivalStation: String, mot: MoT, isDelayed: Bool, delay: Int) {
         self.id = id
         self.name = name
         self.departureTime = departureTime
         self.arrivalTime = arrivalTime
         self.mot = mot
-        self.startStation = startStation
-        self.endStation = endStation
         self.isDelayed = isDelayed
         self.delay = delay
         self.departureStation = departureStation

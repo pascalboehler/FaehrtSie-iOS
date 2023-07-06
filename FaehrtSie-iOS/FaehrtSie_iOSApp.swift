@@ -50,7 +50,9 @@ struct FaehrtSie_iOSApp: App {
     
     var body: some Scene {
         WindowGroup {
-            MainTabView().environmentObject(DataHandler())
+            MainTabView()
+                .environmentObject(DataHandler())
+                .environmentObject(NetworkHandler())
         }
     }
 }
