@@ -13,15 +13,24 @@ struct NextRidesView: View {
     
     var body: some View {
         NavigationStack {
-            ScrollView {
+            List {
                 ForEach(dataHandler.getAllJourneys()) { item in
                     JourneyTileView(journey: item)
                 }
                 .onDelete { index in
                     print("hi")
+                    
+                    guard let indexInt = index.first else {
+                        print("HELO ME")
+                        return
+                    }
+                    
+                    dataHandler.userJourneys.remove(at: indexInt)
                 }
+                .background(.clear)
             }
-            .padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
+            .listStyle(.plain)
+            //.padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
             .navigationTitle(Text("Next rides"))
         }
     }
