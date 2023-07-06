@@ -52,7 +52,7 @@ struct SelectJourneyView: View {
                         .padding(20)
                 }
                     
-                else {
+                else if (networkHandler.isOffline) {
                     // TODO: Make this beautiful
                     Text("You are offline!\nCannot search for departures online")
                         .font(.system(size: 30, weight: .semibold))
