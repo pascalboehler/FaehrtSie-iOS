@@ -42,7 +42,7 @@ public class NotificationHelper {
         UNUserNotificationCenter.current().add(request)
     }
     
-    static func planOntimeNotification(_ timeToTrigger: Date) {
+    static func planOntimeNotification(_ timeToTrigger: Date, depStation: String) {
         let content = UNMutableNotificationContent()
         content.title = notificationTitle
         content.subtitle = "Your ferry is about to arrive"
@@ -51,9 +51,15 @@ public class NotificationHelper {
         
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: timeToTrigger.timeIntervalSince(Date.now) - 120.0, repeats: false) // trigger notifications 2 minutes prior to departure
         
-        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+        let identifierString = "\(depStation)+\(timeToTrigger.timeIntervalSince1970)"
+        
+        let request = UNNotificationRequest(identifier: identifierString, content: content, trigger: trigger)
         
         UNUserNotificationCenter.current().add(request)
+    }
+    
+    static func deletePlannedNotification(_ identifier: String) {
+        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [identifier])
     }
     
 }

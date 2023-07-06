@@ -67,9 +67,17 @@ public class DataHandler : ObservableObject {
     }
     
     public func addJourney(_ journey: Journey) {
+        
+        for item in userJourneys {
+            if (item.departureTime == journey.departureTime && item.departureStation == journey.departureStation) {
+                // if the entry is already there; do nothing
+                return
+            }
+        }
+        
         userJourneys.append(journey)
         
-        NotificationHelper.planOntimeNotification(journey.departureTime)
+        NotificationHelper.planOntimeNotification(journey.departureTime, depStation: journey.departureStation)
         
         userJourneys = userJourneys.sorted(by: {$0.departureTime < $1.departureTime})
         
@@ -77,6 +85,10 @@ public class DataHandler : ObservableObject {
     }
     
     public func deleteJourney(_ index: Int) {
+        let journeyToDel = userJourneys[index]
+        
+        NotificationHelper.deletePlannedNotification("\(journeyToDel.departureStation)+\(journeyToDel.departureTime.timeIntervalSince1970)")
+        
         self.userJourneys.remove(at: index)
         self.writeStoredUserData()
     }

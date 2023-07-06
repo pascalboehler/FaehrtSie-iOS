@@ -45,7 +45,7 @@ struct SelectJourneyView: View {
                     }
                     
                     .padding(5)
-                } else if (!networkHandler.isOffline) {
+                } else if (!networkHandler.isOffline && networkHandler.initialFetchDone) {
                     // TODO: Make this beautiful
                     Text("No ferries found :'(")
                         .font(.system(size: 30, weight: .semibold))

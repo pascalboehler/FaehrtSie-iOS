@@ -13,6 +13,7 @@ public class NetworkHandler : ObservableObject {
     @Published var isFetching: Bool = false
     @Published var isOffline: Bool = false
     @Published var searchResults: [Journey] = []
+    @Published var initialFetchDone: Bool = false
     
     private let baseURL = "https://api.alpaka.fyi"
     
@@ -20,7 +21,7 @@ public class NetworkHandler : ObservableObject {
         
     }
     
-    public func searchForJourney(_ date: Date = Date.now, stationDep: String = "Ernst-August-Schleuse", stationArr: String = "Landungsbrücken") {
+    public func searchForJourney(_ date: Date = Date.now, stationDep: String = "Ernst-August-Schleuse", stationArr: String = "Landungsbruecken") {
         self.isFetching = true
         var searchResultJourneys: [Journey] = []
         
@@ -50,6 +51,7 @@ public class NetworkHandler : ObservableObject {
                 }
                 self.searchResults = searchResultJourneys
                 self.isFetching = false
+                self.checkInitialFetch()
             }
         } else {
             print("Not connected to internet")
@@ -61,7 +63,7 @@ public class NetworkHandler : ObservableObject {
     public func getScheduleForCurrentDay() {
         self.isFetching = true
         
-        let urlString = "\(baseURL)/data/dayInfos"
+        let urlString = "\(baseURL)/data/dayInfo"
         
         var responseJourney: [Journey] = []
         
@@ -94,6 +96,7 @@ public class NetworkHandler : ObservableObject {
                 print("done without errors")
                 self.searchResults = responseJourney
                 self.isFetching = false
+                self.checkInitialFetch()
             }
         } else {
             print("Not connected to internet, cannot update")
@@ -106,6 +109,12 @@ public class NetworkHandler : ObservableObject {
     
     private func IsConnectedToNetwork() -> Bool {
         return NetworkReachabilityManager(host: "api.alpaka.fyi")?.isReachable ?? false
+    }
+    
+    private func checkInitialFetch() {
+        if (!initialFetchDone) {
+            initialFetchDone = true
+        }
     }
     
 }
