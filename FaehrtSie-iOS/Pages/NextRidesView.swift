@@ -32,6 +32,7 @@ struct NextRidesView: View {
                     print("ho")
                 }
                 .background(.clear)
+                .padding(EdgeInsets(top: 20, leading: -10, bottom: 10, trailing: -10))
             }
             .listStyle(.plain)
             //.padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
