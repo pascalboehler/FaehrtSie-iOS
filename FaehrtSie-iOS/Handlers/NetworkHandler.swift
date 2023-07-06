@@ -22,7 +22,6 @@ public class NetworkHandler : ObservableObject {
     
     public func searchForJourney(_ date: Date = Date.now, stationDep: String = "Ernst-August-Schleuse", stationArr: String = "Landungsbrücken") {
         self.isFetching = true
-        
         var searchResultJourneys: [Journey] = []
         
         let urlString = "\(baseURL)/data/getSchedule?unix=\(date.timeIntervalSince1970)&date=\(Utility.convertDateToString(date))&time=\(Utility.convertDateTimeToString(date))&offset=240&station=\(stationDep)"
@@ -90,13 +89,13 @@ public class NetworkHandler : ObservableObject {
                 }
                 print("done without errors")
                 self.searchResults = responseJourney
+                self.isFetching = false
             }
         } else {
             print("Not connected to internet, cannot update")
             self.isOffline = true
+            self.isFetching = false
         }
-        
-        self.isFetching = false
         
         return
     }
