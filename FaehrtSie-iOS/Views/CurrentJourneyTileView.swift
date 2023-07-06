@@ -40,7 +40,7 @@ struct CurrentJourneyTileView: View {
                 .padding(EdgeInsets(top: 5, leading: 15, bottom: 10, trailing: 15))
                 
                 HStack {
-                    Text("\(Utility.convertDateToDayNameString(journey.departureTime)), \(journey.getDepartureDate())")
+                    Text("\(Utility.convertDateToDayNameString(journey.departureTime)),\n\(journey.getDepartureDate())")
                     Spacer()
                     Image(systemName: "clock")
                     Text("\(journey.getDepartureTime())")
