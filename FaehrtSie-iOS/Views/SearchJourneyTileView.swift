@@ -27,7 +27,6 @@ struct SearchJourneyTileView: View {
                         startStation = ""
                     }
                     .padding(EdgeInsets(top: 20, leading: 15, bottom: 5, trailing: 15))
-                //Text("Ernst-August-Schleuse")
                 Divider()
                 TextField("To...", text: $endStation)
                     .onTapGesture {
