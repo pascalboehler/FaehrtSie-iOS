@@ -33,9 +33,11 @@ public class NetworkHandler : ObservableObject {
         }
         
         if (IsConnectedToNetwork()) {
+            self.isOffline = false
             AF.request(fullURL, method: .get).responseDecodable(of: Schedule.self) { response in
                 guard let dataDecoded = response.value else {
                     print("error while decoding response")
+                    self.isFetching = false
                     return
                 }
                 
@@ -59,7 +61,7 @@ public class NetworkHandler : ObservableObject {
     public func getScheduleForCurrentDay() {
         self.isFetching = true
         
-        let urlString = "\(baseURL)/data/dayInfo"
+        let urlString = "\(baseURL)/data/dayInfos"
         
         var responseJourney: [Journey] = []
         
@@ -70,9 +72,11 @@ public class NetworkHandler : ObservableObject {
         }
         
         if (IsConnectedToNetwork()) {
+            self.isOffline = false
             AF.request(fullURL, method: .get).responseDecodable(of: Schedule.self) { response in
                 guard let dataDecoded = response.value else {
                     print("Decoding error")
+                    self.isFetching = false
                     return
                 }
                 print(dataDecoded)

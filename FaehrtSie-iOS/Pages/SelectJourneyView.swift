@@ -28,22 +28,37 @@ struct SelectJourneyView: View {
         NavigationStack {
             VStack {
                 
-                ScrollView {
-                    ForEach(networkHandler.searchResults) { item in
-                        JourneyTileView(journey: item)
-                            .onTapGesture {
-                                if (isProcessing) {
-                                    return
+                if (!networkHandler.isOffline && !networkHandler.searchResults.isEmpty) {
+                    ScrollView {
+                        ForEach(networkHandler.searchResults) { item in
+                            JourneyTileView(journey: item)
+                                .onTapGesture {
+                                    if (isProcessing) {
+                                        return
+                                    }
+                                    isProcessing = true
+                                    dataHandler.addJourney(item)
+                                    dismiss()
                                 }
-                                isProcessing = true
-                                dataHandler.addJourney(item)
-                                dismiss()
-                            }
-                            .padding(EdgeInsets(top: 10, leading: 15, bottom: 10, trailing: 15))
+                                .padding(EdgeInsets(top: 10, leading: 15, bottom: 10, trailing: 15))
+                        }
                     }
+                    
+                    .padding(5)
+                } else if (!networkHandler.isOffline) {
+                    // TODO: Make this beautiful
+                    Text("No ferries found :'(")
+                        .font(.system(size: 30, weight: .semibold))
+                        .padding(20)
+                }
+                    
+                else {
+                    // TODO: Make this beautiful
+                    Text("You are offline!\nCannot search for departures online")
+                        .font(.system(size: 30, weight: .semibold))
+                        .padding(20)
                 }
                 
-                .padding(5)
             }
             .overlay(content: {
                 if (self.networkHandler.isFetching) {
