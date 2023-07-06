@@ -12,6 +12,7 @@
 		FA1E871C2A4F182D0040E1DF /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1E871B2A4F182D0040E1DF /* DataHandler.swift */; };
 		FA1E87202A4F1ABB0040E1DF /* JourneyTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1E871F2A4F1ABB0040E1DF /* JourneyTileView.swift */; };
 		FA27CD5D2A56C70C003524C3 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27CD5C2A56C70C003524C3 /* UserData.swift */; };
+		FA27CD5F2A56D35B003524C3 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27CD5E2A56D35B003524C3 /* Utility.swift */; };
 		FA328A4F2A543B9F00978DB7 /* SearchJourneyTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA328A4E2A543B9F00978DB7 /* SearchJourneyTileView.swift */; };
 		FA4984E42A4D68DE00F683CF /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4984E32A4D68DE00F683CF /* NotificationHelper.swift */; };
 		FA4984E82A4EAB5300F683CF /* SelectJourneyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4984E72A4EAB5300F683CF /* SelectJourneyView.swift */; };
@@ -53,6 +54,7 @@
 		FA1E871B2A4F182D0040E1DF /* DataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHandler.swift; sourceTree = "<group>"; };
 		FA1E871F2A4F1ABB0040E1DF /* JourneyTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyTileView.swift; sourceTree = "<group>"; };
 		FA27CD5C2A56C70C003524C3 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		FA27CD5E2A56D35B003524C3 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		FA328A4E2A543B9F00978DB7 /* SearchJourneyTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchJourneyTileView.swift; sourceTree = "<group>"; };
 		FA4984E32A4D68DE00F683CF /* NotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
 		FA4984E72A4EAB5300F683CF /* SelectJourneyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectJourneyView.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				FAAB405F2A49D02D00134323 /* Assets.xcassets */,
 				FAAB40612A49D02D00134323 /* FaehrtSie_iOS.entitlements */,
 				FAAB40622A49D02D00134323 /* Preview Content */,
+				FA27CD5E2A56D35B003524C3 /* Utility.swift */,
 			);
 			path = "FaehrtSie-iOS";
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				FA4984EA2A4EAB9100F683CF /* MainTabView.swift in Sources */,
 				FA1E87202A4F1ABB0040E1DF /* JourneyTileView.swift in Sources */,
 				FADE707E2A55A4FE00B3E2A4 /* NetworkHandler.swift in Sources */,
+				FA27CD5F2A56D35B003524C3 /* Utility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

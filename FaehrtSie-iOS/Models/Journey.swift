@@ -45,42 +45,18 @@ public class Journey: Identifiable, ObservableObject, Decodable, Encodable {
     }
     
     public func getDepartureDate() -> String {
-        let dateFormatter = DateFormatter()
-        
-        dateFormatter.dateFormat = "dd.MM.yyyy"
-        
-        let formattedString = dateFormatter.string(from: departureTime)
-        
-        return formattedString
+        return Utility.convertToDateString(departureTime)
     }
     
     public func getDepartureTime() -> String {
-        let dateFormatter = DateFormatter()
-        
-        dateFormatter.dateFormat = "HH:mm"
-        
-        let formattedString = dateFormatter.string(from: departureTime)
-        
-        return formattedString
+        return Utility.convertToTimeString(departureTime)
     }
     
     public func getArrivalDate() -> String {
-        let dateFormatter = DateFormatter()
-        
-        dateFormatter.dateFormat = "dd.MM.yyyy"
-        
-        let formattedString = dateFormatter.string(from: arrivalTime)
-        
-        return formattedString
+        return Utility.convertToDateString(arrivalTime)
     }
     
     public func getArrivalTime() -> String {
-        let dateFormatter = DateFormatter()
-        
-        dateFormatter.dateFormat = "HH:mm"
-        
-        let formattedString = dateFormatter.string(from: arrivalTime)
-        
-        return formattedString
+        return Utility.convertToTimeString(arrivalTime)
     }
 }
