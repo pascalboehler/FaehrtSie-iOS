@@ -71,7 +71,7 @@ struct CurrentJourneyTileView: View {
                             .scaledToFit()
                             .frame(width: 22)
                         Image(systemName: "clock")
-                        Text("20 Minutes")
+                        Text("\(journey.getTravelTimeInMinutes()) Minutes")
                             .font(.system(size: 17))
                         Spacer()
                     }

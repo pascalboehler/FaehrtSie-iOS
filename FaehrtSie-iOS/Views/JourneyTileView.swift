@@ -44,7 +44,7 @@ struct JourneyTileView: View {
                             .frame(width: 22)
                         Image(systemName: "clock")
                         // TODO: calculate this from dep && arr time
-                        Text("20 Minutes")
+                        Text("\(journey.getTravelTimeInMinutes()) Minutes")
                             .font(.system(size: 15))
                     }
                     Spacer().frame(height: 10)

@@ -59,4 +59,11 @@ public class Journey: Identifiable, ObservableObject, Decodable, Encodable {
     public func getArrivalTime() -> String {
         return Utility.convertDateTimeToString(arrivalTime)
     }
+    
+    public func getTravelTimeInMinutes() -> Int {
+        
+        let timeDiff = self.arrivalTime.timeIntervalSince1970 - self.departureTime.timeIntervalSince1970
+        
+        return Int((timeDiff / 60).rounded())
+    }
 }
