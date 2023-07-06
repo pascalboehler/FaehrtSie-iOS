@@ -13,7 +13,7 @@ struct CurrentJourneyTileView: View {
     
     var body: some View {
         VStack {
-            Text("Your next trip")
+            Text("Upcoming")
                 .font(.system(size: 40))
                 .padding(EdgeInsets(top: 10, leading: 5, bottom: -2, trailing: 5))
             
