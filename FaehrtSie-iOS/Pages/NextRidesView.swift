@@ -14,7 +14,7 @@ struct NextRidesView: View {
     var body: some View {
         NavigationStack {
             List {
-                ForEach(dataHandler.getAllJourneys()) { item in
+                ForEach(dataHandler.userJourneys) { item in
                     JourneyTileView(journey: item)
                 }
                 .onDelete { index in
@@ -26,6 +26,10 @@ struct NextRidesView: View {
                     }
                     
                     dataHandler.userJourneys.remove(at: indexInt)
+                    
+                    print(dataHandler.userJourneys.count)
+                    
+                    print("ho")
                 }
                 .background(.clear)
             }

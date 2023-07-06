@@ -50,7 +50,7 @@ public class NetworkHandler : ObservableObject {
                     print(departure)
                     let departureDate = Date(timeIntervalSince1970: departure)
                     let arrivalDate = departureDate.addingTimeInterval(1200)
-                    let journeyToAdd = Journey(id: i, name: "RESULT", departureTime: departureDate, departureStation: "Ernst-August-Schleuse", arrivalTime: arrivalDate, arrivalStation: "Landungsbrücken", mot: MoT(lineNum: 73, type: .Ferry, startPoint: "Ernst-August-Schleuse", endPoint: "Landungsbrücken", iconName: "Faehre73Logo"), isDelayed: false, delay: 0)
+                    let journeyToAdd = Journey(name: "RESULT", departureTime: departureDate, departureStation: "Ernst-August-Schleuse", arrivalTime: arrivalDate, arrivalStation: "Landungsbrücken", mot: MoT(lineNum: 73, type: .Ferry, startPoint: "Ernst-August-Schleuse", endPoint: "Landungsbrücken", iconName: "Faehre73Logo"), isDelayed: false, delay: 0)
                     responseJourney.append(journeyToAdd)
                     i += 1
                 }

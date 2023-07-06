@@ -23,7 +23,7 @@ public enum VehicleType: String {
 }
 
 public class Journey: Identifiable, ObservableObject {
-    public var id: Int
+    //public var id: Int
     public var name: String
     public var departureTime: Date
     public var arrivalTime: Date
@@ -33,8 +33,7 @@ public class Journey: Identifiable, ObservableObject {
     public var departureStation: String
     public var arrivalStation: String
     
-    public init(id: Int, name: String, departureTime: Date, departureStation: String, arrivalTime: Date, arrivalStation: String, mot: MoT, isDelayed: Bool, delay: Int) {
-        self.id = id
+    public init(name: String, departureTime: Date, departureStation: String, arrivalTime: Date, arrivalStation: String, mot: MoT, isDelayed: Bool, delay: Int) {
         self.name = name
         self.departureTime = departureTime
         self.arrivalTime = arrivalTime
