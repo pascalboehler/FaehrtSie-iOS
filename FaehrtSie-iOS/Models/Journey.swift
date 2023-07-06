@@ -23,7 +23,6 @@ public enum VehicleType: String, Decodable, Encodable {
 }
 
 public class Journey: Identifiable, ObservableObject, Decodable, Encodable {
-    //public var id: Int
     public var name: String
     public var departureTime: Date
     public var arrivalTime: Date
