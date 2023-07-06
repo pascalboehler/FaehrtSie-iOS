@@ -45,18 +45,18 @@ public class Journey: Identifiable, ObservableObject, Decodable, Encodable {
     }
     
     public func getDepartureDate() -> String {
-        return Utility.convertToDateString(departureTime)
+        return Utility.convertDateToString(departureTime)
     }
     
     public func getDepartureTime() -> String {
-        return Utility.convertToTimeString(departureTime)
+        return Utility.convertDateTimeToString(departureTime)
     }
     
     public func getArrivalDate() -> String {
-        return Utility.convertToDateString(arrivalTime)
+        return Utility.convertDateToString(arrivalTime)
     }
     
     public func getArrivalTime() -> String {
-        return Utility.convertToTimeString(arrivalTime)
+        return Utility.convertDateTimeToString(arrivalTime)
     }
 }

@@ -8,7 +8,7 @@
 import Foundation
 
 public class Utility {
-    public static func convertToDateString(_ date: Date) -> String {
+    public static func convertDateToString (_ date: Date) -> String {
         
         let dateFormatter = DateFormatter()
         
@@ -19,7 +19,7 @@ public class Utility {
         return formattedString
     }
     
-    public static func convertToTimeString(_ date: Date) -> String {
+    public static func convertDateTimeToString(_ date: Date) -> String {
         let dateFormatter = DateFormatter()
         
         dateFormatter.dateFormat = "HH:mm"
