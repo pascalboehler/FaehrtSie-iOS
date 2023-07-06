@@ -19,9 +19,9 @@ public class DataHandler : ObservableObject {
     }
     
     public func addJourney(_ journey: Journey) {
-        let newId = userJourneys.count + 1
-        
         userJourneys.append(journey)
+        
+        NotificationHelper.planOntimeNotification(journey.departureTime)
         
         userJourneys = userJourneys.sorted(by: {$0.departureTime < $1.departureTime})
     }

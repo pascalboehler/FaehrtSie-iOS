@@ -42,4 +42,18 @@ public class NotificationHelper {
         UNUserNotificationCenter.current().add(request)
     }
     
+    static func planOntimeNotification(_ timeToTrigger: Date) {
+        let content = UNMutableNotificationContent()
+        content.title = notificationTitle
+        content.subtitle = "Your ferry is about to arrive"
+        content.body = "Hey, it looks like your ferry is about to arrive. Leave now to catch it in time"
+        content.sound = UNNotificationSound.default
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: timeToTrigger.timeIntervalSince(Date.now) - 2000.0, repeats: false) // trigger notifications 20 minutes prior to departure
+        
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request)
+    }
+    
 }
