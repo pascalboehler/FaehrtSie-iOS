@@ -24,18 +24,6 @@ struct SelectJourneyView: View {
     
     @State var isProcessing = false
     
-    init() {
-        
-    }
-    
-    init(startStation: String, selectedStartDate: Date, endStation: String) {
-        self.startStation = startStation
-        self.selectedStartDate = selectedStartDate
-        self.endStation = endStation
-        
-        networkHandler.searchForJourney()
-    }
-    
     var body: some View {
         NavigationStack {
             VStack {
@@ -57,7 +45,16 @@ struct SelectJourneyView: View {
                 
                 .padding(5)
             }
+            .overlay(content: {
+                if (self.networkHandler.isFetching) {
+                    ProgressView()
+                        .progressViewStyle(.circular)
+                }
+            })
             .navigationTitle(Text("Results"))
+        }.onAppear {
+            networkHandler.getScheduleForCurrentDay()
+            //networkHandler.searchForJourney(selectedStartDate, stationDep: startStation, stationArr: endStation)
         }
         
     }
