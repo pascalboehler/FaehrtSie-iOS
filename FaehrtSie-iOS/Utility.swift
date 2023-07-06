@@ -28,4 +28,14 @@ public class Utility {
         
         return formattedString
     }
+    
+    public static func convertDateToDayNameString(_ date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.dateFormat = "EEEE"
+        
+        let formattedString = dateFormatter.string(from: date)
+        
+        return formattedString
+    }
 }

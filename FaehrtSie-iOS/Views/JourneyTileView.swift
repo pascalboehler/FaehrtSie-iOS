@@ -15,8 +15,7 @@ struct JourneyTileView: View {
     
         VStack {
             HStack {
-                // TODO: Get weekday
-                Text("Monday, \(journey.getDepartureDate())")
+                Text("\(Utility.convertDateToDayNameString(journey.departureTime)), \(journey.getDepartureDate())")
                     .font(.system(size: 22))
                 Spacer()
                 Image(systemName: "clock").font(.system(size: 22))
