@@ -25,7 +25,7 @@ struct NextRidesView: View {
                         return
                     }
                     
-                    dataHandler.userJourneys.remove(at: indexInt)
+                    dataHandler.deleteJourney(indexInt)
                     
                     print(dataHandler.userJourneys.count)
                     

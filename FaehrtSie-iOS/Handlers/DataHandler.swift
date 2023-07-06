@@ -16,6 +16,54 @@ public class DataHandler : ObservableObject {
         userJourneys = journeys
         //self.addJourney(Journey(id: 1, name: "hi", departureTime: Date.now, departureStation: "Ernst-August-Schleuse", arrivalTime: Date.now, arrivalStation: "Landungsbrücke", mot: MoT(lineNum: 73, type: .Ferry, startPoint: "Ernst-August-Schleuse", endPoint: "Landungsbrücken", iconName: "Faehre73Logo"), isDelayed: false, delay: 0))
         //self.addJourney(Journey(id: 2, name: "test", departureTime: Date.now, departureStation: "Landungsbrücken", arrivalTime: Date.now, arrivalStation: "Ernst-August-Schleuse", mot: MoT(lineNum: 73, type: .Ferry, startPoint: "Landungsbrücken", endPoint: "Ernst-August-Schleuse", iconName: "Faehre73Logo"), isDelayed: true, delay: 10))
+        
+        print("Reading from disk")
+        self.readStoredUserData()
+    }
+    
+    private func readStoredUserData() {
+        
+        var tempUserData: [Journey] = []
+        
+        let url = getDocumentsDir().appending(path: "userData.json")
+        
+        do {
+            let data = try Data(contentsOf: url)
+            let decoder = JSONDecoder()
+            
+            let decodedStuff = try decoder.decode(UserData.self, from: data)
+            tempUserData = decodedStuff.userStoredJourney
+        } catch {
+            print("Hi")
+            return
+        }
+        
+        userJourneys = tempUserData
+        
+    }
+    
+    private func writeStoredUserData() {
+        var userData = UserData()
+        userData.userStoredJourney = self.userJourneys
+        
+        let url = getDocumentsDir().appending(path: "userData.json")
+        
+        do {
+            let encoder = JSONEncoder()
+            
+            let encodedList = try encoder.encode(userData)
+            
+            try encodedList.write(to: url)
+            
+        } catch {
+            print("THIS BLEW UP")
+        }
+    }
+    
+    private func getDocumentsDir() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        
+        return paths[0] // should be fine
     }
     
     public func addJourney(_ journey: Journey) {
@@ -24,6 +72,13 @@ public class DataHandler : ObservableObject {
         NotificationHelper.planOntimeNotification(journey.departureTime)
         
         userJourneys = userJourneys.sorted(by: {$0.departureTime < $1.departureTime})
+        
+        self.writeStoredUserData()
+    }
+    
+    public func deleteJourney(_ index: Int) {
+        self.userJourneys.remove(at: index)
+        self.writeStoredUserData()
     }
     
     public func getNextJourney() -> Journey {

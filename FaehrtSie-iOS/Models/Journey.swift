@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct MoT {
+public struct MoT : Decodable, Encodable{
     public var lineNum: Int
     public var type: VehicleType
     public var startPoint: String
@@ -15,14 +15,14 @@ public struct MoT {
     public var iconName: String // insert icon here
 }
 
-public enum VehicleType: String {
+public enum VehicleType: String, Decodable, Encodable {
     case Ferry = "Ferry"
     case Bus = "Bus"
     case SBahn = "SBahn"
     case Express = "Express"
 }
 
-public class Journey: Identifiable, ObservableObject {
+public class Journey: Identifiable, ObservableObject, Decodable, Encodable {
     //public var id: Int
     public var name: String
     public var departureTime: Date
