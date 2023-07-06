@@ -28,7 +28,7 @@ struct ContentView: View {
                     .padding(EdgeInsets(top: 10, leading: 5, bottom: 10, trailing: 5))
                 
             }
-            
+            .toolbar(dataHandler.userJourneys.isEmpty ? .visible : .hidden)
             .navigationTitle(Text("Home"))
         }
         

@@ -13,32 +13,34 @@ struct CurrentJourneyTileView: View {
     
     var body: some View {
         VStack {
-            Text("Upcoming")
+            /*Text("Upcoming")
                 .font(.system(size: 40))
-                .padding(EdgeInsets(top: 10, leading: 5, bottom: -2, trailing: 5))
+                .padding(EdgeInsets(top: 10, leading: 5, bottom: -2, trailing: 5))*/
+            
+            HStack {
+                
+                Spacer()
+                
+                Image(systemName: "\(journey.mot.type.rawValue.lowercased())")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 100)
+                
+                Spacer()
+                
+                Image(journey.mot.iconName)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 75)
+                
+                Spacer()
+                
+            }
+            .padding(EdgeInsets(top: 10, leading: 5, bottom: -2, trailing: 5))
+            .padding(EdgeInsets(top: 5, leading: 15, bottom: 10, trailing: 15))
             
             VStack {
-                HStack {
-                    
-                    Spacer()
-                    
-                    Image(systemName: "\(journey.mot.type.rawValue.lowercased())")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(height: 100)
-                    
-                    Spacer()
-                    
-                    Image(journey.mot.iconName)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(height: 75)
-                    
-                    Spacer()
-                    
-                }
-                .padding(EdgeInsets(top: 5, leading: 15, bottom: 10, trailing: 15))
-                
+            
                 HStack {
                     Text("\(Utility.convertDateToDayNameString(journey.departureTime)),\n\(journey.getDepartureDate())")
                     Spacer()
