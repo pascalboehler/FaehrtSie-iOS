@@ -19,10 +19,10 @@ struct MainTabView: View {
                 .tabItem {
                     Label("Next rides", systemImage: "calendar.day.timeline.left")
                 }
-            AccountSettingsView()
+            /*AccountSettingsView()
                 .tabItem {
                     Label("My Account", systemImage: "person.crop.circle.fill")
-                }
+                }*/
             
         }
     }
