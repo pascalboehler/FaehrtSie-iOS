@@ -25,7 +25,7 @@ public class NetworkHandler : ObservableObject {
         self.isFetching = true
         var searchResultJourneys: [Journey] = []
         
-        let urlString = "\(baseURL)/data/getScheduleFor?unix=\(Int(date.timeIntervalSince1970))&date=\(Utility.convertDateToString(date))&time=\(Utility.convertDateTimeToString(date))&offset=120&depStation=\(stationDep)&arrStation=\(stationArr)"
+        let urlString = "\(baseURL)/data/getScheduleFor?unix=\(Int(date.timeIntervalSince1970))&date=\(Utility.convertDateToString(date))&time=\(Utility.convertDateTimeToString(date))&offset=120&depStation=\(Utility.unicodeToASCII(stationDep))&arrStation=\(Utility.unicodeToASCII(stationArr))"
         
         print(urlString)
         

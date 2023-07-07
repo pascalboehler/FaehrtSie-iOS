@@ -38,4 +38,28 @@ public class Utility {
         
         return formattedString
     }
+    
+    public static func unicodeToASCII(_ stringToConvert: String) -> String {
+        
+        var asciiString = ""
+        
+        for char in stringToConvert {
+            switch (char) {
+            case "ä":
+                asciiString += "ae"
+                break
+            case "ü":
+                asciiString += "ue"
+                break
+            case "ö":
+                asciiString += "oe"
+                break
+            default:
+                asciiString += "\(char)"
+                break
+            }
+        }
+        
+        return asciiString
+    }
 }
