@@ -13,30 +13,37 @@ struct NextRidesView: View {
     
     var body: some View {
         NavigationStack {
-            List {
-                ForEach(dataHandler.userJourneys) { item in
-                    JourneyTileView(journey: item)
-                }
-                .onDelete { index in
-                    print("hi")
-                    
-                    guard let indexInt = index.first else {
-                        print("HELO ME")
-                        return
+            if (!dataHandler.userJourneys.isEmpty) {
+                List {
+                    ForEach(dataHandler.userJourneys) { item in
+                        JourneyTileView(journey: item)
                     }
-                    
-                    dataHandler.deleteJourney(indexInt)
-                    
-                    print(dataHandler.userJourneys.count)
-                    
-                    print("ho")
+                    .onDelete { index in
+                        print("hi")
+                        
+                        guard let indexInt = index.first else {
+                            print("HELO ME")
+                            return
+                        }
+                        
+                        dataHandler.deleteJourney(indexInt)
+                        
+                        print(dataHandler.userJourneys.count)
+                        
+                        print("ho")
+                    }
+                    .background(.clear)
+                    .padding(EdgeInsets(top: 20, leading: -10, bottom: 10, trailing: -10))
                 }
-                .background(.clear)
-                .padding(EdgeInsets(top: 20, leading: -10, bottom: 10, trailing: -10))
+                .listStyle(.plain)
+                .navigationTitle(Text("Next rides"))
+            } else {
+                ErrorFerryTileView(errorDescription: "It's so empty here:(\n\nJump to the Home Screen to add a new journey")
+                    .navigationTitle(Text("Next rides"))
             }
-            .listStyle(.plain)
+            
             //.padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
-            .navigationTitle(Text("Next rides"))
+            
         }
     }
 }

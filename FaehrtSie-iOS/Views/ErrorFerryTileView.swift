@@ -23,6 +23,7 @@ struct ErrorFerryTileView: View {
             Spacer()
             Text("\(errorDescription)")
                 .font(.system(size: 30, weight: .semibold))
+                .multilineTextAlignment(.center)
                 .padding(20)
             Spacer()
         }
