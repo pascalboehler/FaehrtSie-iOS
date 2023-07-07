@@ -46,17 +46,12 @@ struct SelectJourneyView: View {
                     
                     .padding(5)
                 } else if (!networkHandler.isOffline && networkHandler.initialFetchDone) {
-                    // TODO: Make this beautiful
-                    Text("No ferries found :'(")
-                        .font(.system(size: 30, weight: .semibold))
-                        .padding(20)
+                    ErrorFerryTileView(errorDescription: "No ferries found :'(")
+                    
                 }
                     
                 else if (networkHandler.isOffline) {
-                    // TODO: Make this beautiful
-                    Text("You are offline!\nCannot search for departures online")
-                        .font(.system(size: 30, weight: .semibold))
-                        .padding(20)
+                    ErrorFerryTileView(errorDescription: "You are offline!\nCannot search for departures online")
                 }
                 
             }
