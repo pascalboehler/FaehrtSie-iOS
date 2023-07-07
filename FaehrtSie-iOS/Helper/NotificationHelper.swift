@@ -23,8 +23,6 @@ public class NotificationHelper {
         
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
         
-        print(UUID().uuidString)
-        
         UNUserNotificationCenter.current().add(request)
     }
     
@@ -49,7 +47,7 @@ public class NotificationHelper {
         content.body = "Hey, it looks like your ferry is about to arrive. Leave now to catch it in time"
         content.sound = UNNotificationSound.default
         
-        if ((timeToTrigger.timeIntervalSince(Date.now) - 120.0) <= 0) {
+        if ((timeToTrigger.timeIntervalSince(Date.now) - 900.0) <= 0) {
             return
         }
         

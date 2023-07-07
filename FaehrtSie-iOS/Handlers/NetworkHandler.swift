@@ -27,8 +27,6 @@ public class NetworkHandler : ObservableObject {
         
         let urlString = "\(baseURL)/data/getScheduleFor?unix=\(Int(date.timeIntervalSince1970))&date=\(Utility.convertDateToString(date))&time=\(Utility.convertDateTimeToString(date))&offset=120&depStation=\(Utility.unicodeToASCII(stationDep))&arrStation=\(Utility.unicodeToASCII(stationArr))"
         
-        print(urlString)
-        
         guard let fullURL = URL(string: urlString) else {
             self.isFetching = false
             print("error while creating url")
@@ -83,17 +81,10 @@ public class NetworkHandler : ObservableObject {
                     self.isFetching = false
                     return
                 }
-                print(dataDecoded)
-                
-                var i = 1;
-                
                 for departure in dataDecoded.departures {
-                    print(departure)
                     let departureDate = Date(timeIntervalSince1970: departure)
                     let arrivalDate = departureDate.addingTimeInterval(1200)
                     let journeyToAdd = Journey(name: "RESULT", departureTime: departureDate, departureStation: "Ernst-August-Schleuse", arrivalTime: arrivalDate, arrivalStation: "Landungsbrücken", mot: MoT(lineNum: 73, type: .Ferry, startPoint: "Ernst-August-Schleuse", endPoint: "Landungsbrücken", iconName: "Faehre73Logo"), isDelayed: false, delay: 0)
-                    responseJourney.append(journeyToAdd)
-                    i += 1
                 }
                 print("done without errors")
                 self.searchResults = responseJourney

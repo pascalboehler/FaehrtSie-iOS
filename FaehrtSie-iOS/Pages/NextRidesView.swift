@@ -19,18 +19,11 @@ struct NextRidesView: View {
                         JourneyTileView(journey: item)
                     }
                     .onDelete { index in
-                        print("hi")
-                        
                         guard let indexInt = index.first else {
-                            print("HELO ME")
                             return
                         }
                         
                         dataHandler.deleteJourney(indexInt)
-                        
-                        print(dataHandler.userJourneys.count)
-                        
-                        print("ho")
                     }
                     .background(.clear)
                     .padding(EdgeInsets(top: 20, leading: -10, bottom: 10, trailing: -10))

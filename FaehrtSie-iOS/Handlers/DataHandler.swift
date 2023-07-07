@@ -17,8 +17,6 @@ public class DataHandler : ObservableObject {
         userJourneys = journeys
         //self.addJourney(Journey(id: 1, name: "hi", departureTime: Date.now, departureStation: "Ernst-August-Schleuse", arrivalTime: Date.now, arrivalStation: "Landungsbrücke", mot: MoT(lineNum: 73, type: .Ferry, startPoint: "Ernst-August-Schleuse", endPoint: "Landungsbrücken", iconName: "Faehre73Logo"), isDelayed: false, delay: 0))
         //self.addJourney(Journey(id: 2, name: "test", departureTime: Date.now, departureStation: "Landungsbrücken", arrivalTime: Date.now, arrivalStation: "Ernst-August-Schleuse", mot: MoT(lineNum: 73, type: .Ferry, startPoint: "Landungsbrücken", endPoint: "Ernst-August-Schleuse", iconName: "Faehre73Logo"), isDelayed: true, delay: 10))
-        
-        print("Reading from disk")
         self.readStoredUserData()
         self.cleanUpUserJourneyList()
     }
@@ -99,7 +97,6 @@ public class DataHandler : ObservableObject {
     
     public func getNextJourney() -> Journey? {
         // TODO: Make this time based ==> somewhat fixed due to sorting of the list
-        print("I WAS CALLED")
         for item in self.userJourneys {
             if (item.departureTime > Date.now) {
                 //self.isCurrentVisible = true
