@@ -11,17 +11,22 @@ struct JourneyTileView: View {
     
     @State var journey: Journey
     
+    @State var tapToAdd: Bool = false
+    
     var body: some View {
     
         VStack {
             HStack {
                 Text("\(Utility.convertDateToDayNameString(journey.departureTime)), \(journey.getDepartureDate())")
-                    .font(.system(size: 22))
                 Spacer()
-                Image(systemName: "clock").font(.system(size: 22))
+                Image(systemName: "clock")
                 Text("\(journey.getDepartureTime())")
-                    .font(.system(size: 22))
+                if (tapToAdd) {
+                    Spacer().frame(width: 10)
+                    Image(systemName: "plus.app.fill")
+                }
             }
+            .font(.system(size: 22))
             .foregroundColor(.black)
             .padding(EdgeInsets(top: 10, leading: 15, bottom: -2, trailing: 15))
             HStack { // the part underneath
@@ -70,6 +75,6 @@ struct JourneyTileView: View {
 
 struct JourneyTileView_Previews: PreviewProvider {
     static var previews: some View {
-        JourneyTileView(journey: Journey(name: "hi", departureTime: Date.now, departureStation: "Ernst-August-Schleuse", arrivalTime: Date.now, arrivalStation: "Landungsbrücke", mot: MoT(lineNum: 73, type: .Ferry, startPoint: "Ernst-August-Schleuse", endPoint: "Landungsbrücken", iconName: "Faehre73Logo"), isDelayed: false, delay: 0))
+        JourneyTileView(journey: Journey(name: "hi", departureTime: Date.now, departureStation: "Ernst-August-Schleuse", arrivalTime: Date.now, arrivalStation: "Landungsbrücke", mot: MoT(lineNum: 73, type: .Ferry, startPoint: "Ernst-August-Schleuse", endPoint: "Landungsbrücken", iconName: "Faehre73Logo"), isDelayed: false, delay: 0), tapToAdd: true)
     }
 }

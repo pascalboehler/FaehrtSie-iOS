@@ -31,7 +31,7 @@ struct SelectJourneyView: View {
                 if (!networkHandler.isOffline && !networkHandler.searchResults.isEmpty) {
                     ScrollView {
                         ForEach(networkHandler.searchResults) { item in
-                            JourneyTileView(journey: item)
+                            JourneyTileView(journey: item, tapToAdd: true)
                                 .onTapGesture {
                                     if (isProcessing) {
                                         return
