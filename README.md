@@ -6,7 +6,7 @@
 
 ### Screenshots
 
-![Simulator screenshot Home Screen without Current View](./docs/Images/Screenshot-Home-without-Current.png) ![Simulator screenshot Results Screen](./docs/Images/Screenshot-Results-Search.png) ![Simulator screenshot Home Screen with Current View](./docs/Images/Screenshot-Home-with-Current.png) ![Simulator screenshot Next Rides view](./docs/Images/Screenshot-Next-Rides-One-Item.png)
+![Simulator screenshot Home Screen without Current View](./docs/Screenshots/Screenshot-Home-without-Current.png) ![Simulator screenshot Results Screen](./docs/Screenshots/Screenshot-Results-Search.png) ![Simulator screenshot Home Screen with Current View](./docs/Screenshots/Screenshot-Home-with-Current.png) ![Simulator screenshot Next Rides view](./docs/Screenshots/Screenshot-Next-Rides-One-Item.png)
 
 ## About the project
 
