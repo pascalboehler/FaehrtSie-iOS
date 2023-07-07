@@ -16,8 +16,8 @@ struct ContentView: View {
         NavigationStack {
             ScrollView {
                 
-                if (!dataHandler.userJourneys.isEmpty) {
-                    CurrentJourneyTileView(journey: dataHandler.getNextJourney())
+                if let currJourney = dataHandler.getNextJourney() {
+                    CurrentJourneyTileView(journey: currJourney)
                         .padding(EdgeInsets(top: 20, leading: 5, bottom: 10, trailing: 5))
                         .onTapGesture {
                             print(dataHandler.userJourneys.first!.arrivalTime)

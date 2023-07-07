@@ -49,6 +49,10 @@ public class NotificationHelper {
         content.body = "Hey, it looks like your ferry is about to arrive. Leave now to catch it in time"
         content.sound = UNNotificationSound.default
         
+        if ((timeToTrigger.timeIntervalSince(Date.now) - 120.0) <= 0) {
+            return
+        }
+        
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: timeToTrigger.timeIntervalSince(Date.now) - 120.0, repeats: false) // trigger notifications 2 minutes prior to departure
         
         let identifierString = "\(depStation)+\(timeToTrigger.timeIntervalSince1970)"

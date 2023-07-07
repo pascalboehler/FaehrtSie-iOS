@@ -10,6 +10,7 @@ import Foundation
 public class DataHandler : ObservableObject {
     
     @Published var userJourneys: [Journey]
+    //@Published var isCurrentVisible: Bool = false
     
     public init(_ journeys: [Journey] = []) {
         
@@ -19,6 +20,7 @@ public class DataHandler : ObservableObject {
         
         print("Reading from disk")
         self.readStoredUserData()
+        self.cleanUpUserJourneyList()
     }
     
     private func readStoredUserData() {
@@ -81,6 +83,7 @@ public class DataHandler : ObservableObject {
         
         userJourneys = userJourneys.sorted(by: {$0.departureTime < $1.departureTime})
         
+        self.cleanUpUserJourneyList()
         self.writeStoredUserData()
     }
     
@@ -90,16 +93,42 @@ public class DataHandler : ObservableObject {
         NotificationHelper.deletePlannedNotification("\(journeyToDel.departureStation)+\(journeyToDel.departureTime.timeIntervalSince1970)")
         
         self.userJourneys.remove(at: index)
+        self.cleanUpUserJourneyList()
         self.writeStoredUserData()
     }
     
-    public func getNextJourney() -> Journey {
+    public func getNextJourney() -> Journey? {
         // TODO: Make this time based ==> somewhat fixed due to sorting of the list
-        return self.userJourneys.first!
+        print("I WAS CALLED")
+        for item in self.userJourneys {
+            if (item.departureTime > Date.now) {
+                //self.isCurrentVisible = true
+                return item
+            }
+        }
+        return nil
+    }
+    
+    public func cleanUpUserJourneyList() {
+        if (self.userJourneys.isEmpty) {
+            return
+        }
+        
+        let theDay: Date = Date.now
+        
+        var tempList: [Journey] = []
+        
+        for item in self.userJourneys {
+            if (item.departureTime >= theDay) {
+                tempList.append(item)
+            }
+        }
+        
+        self.userJourneys = tempList
     }
     
     public func getAllJourneys() -> [Journey] {
-        
+        self.cleanUpUserJourneyList()
         return userJourneys
     }
     
