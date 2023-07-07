@@ -19,6 +19,9 @@
 		FA4984EA2A4EAB9100F683CF /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4984E92A4EAB9100F683CF /* MainTabView.swift */; };
 		FA4984EC2A4EAD2500F683CF /* AccountSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4984EB2A4EAD2500F683CF /* AccountSettingsView.swift */; };
 		FA4F8BBC2A530731003877C2 /* CurrentJourneyTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4F8BBB2A530731003877C2 /* CurrentJourneyTileView.swift */; };
+		FA5287652A583EA60031315A /* Screenshot-Home-without-Current.png in Resources */ = {isa = PBXBuildFile; fileRef = FA5287612A583EA60031315A /* Screenshot-Home-without-Current.png */; };
+		FA5287672A583EA60031315A /* Screenshot-Home-With-Current.png in Resources */ = {isa = PBXBuildFile; fileRef = FA5287632A583EA60031315A /* Screenshot-Home-With-Current.png */; };
+		FA5287682A583EA60031315A /* Screenshot-Results-Search.png in Resources */ = {isa = PBXBuildFile; fileRef = FA5287642A583EA60031315A /* Screenshot-Results-Search.png */; };
 		FAAB405C2A49D02900134323 /* FaehrtSie_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB405B2A49D02900134323 /* FaehrtSie_iOSApp.swift */; };
 		FAAB405E2A49D02900134323 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB405D2A49D02900134323 /* ContentView.swift */; };
 		FAAB40602A49D02D00134323 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAAB405F2A49D02D00134323 /* Assets.xcassets */; };
@@ -26,6 +29,7 @@
 		FAAB406E2A49D02E00134323 /* FaehrtSie_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB406D2A49D02E00134323 /* FaehrtSie_iOSTests.swift */; };
 		FAAB40782A49D02E00134323 /* FaehrtSie_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB40772A49D02E00134323 /* FaehrtSie_iOSUITests.swift */; };
 		FAAB407A2A49D02E00134323 /* FaehrtSie_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB40792A49D02E00134323 /* FaehrtSie_iOSUITestsLaunchTests.swift */; };
+		FABB4B052A58409300D39CC7 /* Screenshot-Next-Rides-One-Item.png in Resources */ = {isa = PBXBuildFile; fileRef = FABB4B042A58409300D39CC7 /* Screenshot-Next-Rides-One-Item.png */; };
 		FAD6F5212A55D97B0081CD76 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD6F5202A55D97B0081CD76 /* Schedule.swift */; };
 		FADE707E2A55A4FE00B3E2A4 /* NetworkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE707D2A55A4FE00B3E2A4 /* NetworkHandler.swift */; };
 		FAE719BA2A4EB83500F12E2E /* NextRidesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE719B92A4EB83400F12E2E /* NextRidesView.swift */; };
@@ -62,6 +66,9 @@
 		FA4984E92A4EAB9100F683CF /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		FA4984EB2A4EAD2500F683CF /* AccountSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingsView.swift; sourceTree = "<group>"; };
 		FA4F8BBB2A530731003877C2 /* CurrentJourneyTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentJourneyTileView.swift; sourceTree = "<group>"; };
+		FA5287612A583EA60031315A /* Screenshot-Home-without-Current.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screenshot-Home-without-Current.png"; sourceTree = "<group>"; };
+		FA5287632A583EA60031315A /* Screenshot-Home-With-Current.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screenshot-Home-With-Current.png"; sourceTree = "<group>"; };
+		FA5287642A583EA60031315A /* Screenshot-Results-Search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screenshot-Results-Search.png"; sourceTree = "<group>"; };
 		FAA0272D2A49D1A600339F34 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FAAB40582A49D02900134323 /* FaehrtSie-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FaehrtSie-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAAB405B2A49D02900134323 /* FaehrtSie_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaehrtSie_iOSApp.swift; sourceTree = "<group>"; };
@@ -74,6 +81,7 @@
 		FAAB40732A49D02E00134323 /* FaehrtSie-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FaehrtSie-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAAB40772A49D02E00134323 /* FaehrtSie_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaehrtSie_iOSUITests.swift; sourceTree = "<group>"; };
 		FAAB40792A49D02E00134323 /* FaehrtSie_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaehrtSie_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FABB4B042A58409300D39CC7 /* Screenshot-Next-Rides-One-Item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screenshot-Next-Rides-One-Item.png"; sourceTree = "<group>"; };
 		FAD6F5202A55D97B0081CD76 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		FADE707D2A55A4FE00B3E2A4 /* NetworkHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkHandler.swift; sourceTree = "<group>"; };
 		FAE719B92A4EB83400F12E2E /* NextRidesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextRidesView.swift; sourceTree = "<group>"; };
@@ -146,9 +154,29 @@
 			path = Pages;
 			sourceTree = "<group>";
 		};
+		FA52875F2A583E290031315A /* docs */ = {
+			isa = PBXGroup;
+			children = (
+				FA5287602A583E380031315A /* Screenshots */,
+			);
+			path = docs;
+			sourceTree = "<group>";
+		};
+		FA5287602A583E380031315A /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				FABB4B042A58409300D39CC7 /* Screenshot-Next-Rides-One-Item.png */,
+				FA5287612A583EA60031315A /* Screenshot-Home-without-Current.png */,
+				FA5287642A583EA60031315A /* Screenshot-Results-Search.png */,
+				FA5287632A583EA60031315A /* Screenshot-Home-With-Current.png */,
+			);
+			path = Screenshots;
+			sourceTree = "<group>";
+		};
 		FAAB404F2A49D02900134323 = {
 			isa = PBXGroup;
 			children = (
+				FA52875F2A583E290031315A /* docs */,
 				FAA0272D2A49D1A600339F34 /* README.md */,
 				FAAB405A2A49D02900134323 /* FaehrtSie-iOS */,
 				FAAB406C2A49D02E00134323 /* FaehrtSie-iOSTests */,
@@ -333,8 +361,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA5287672A583EA60031315A /* Screenshot-Home-With-Current.png in Resources */,
 				FAAB40642A49D02D00134323 /* Preview Assets.xcassets in Resources */,
+				FA5287682A583EA60031315A /* Screenshot-Results-Search.png in Resources */,
 				FAAB40602A49D02D00134323 /* Assets.xcassets in Resources */,
+				FABB4B052A58409300D39CC7 /* Screenshot-Next-Rides-One-Item.png in Resources */,
+				FA5287652A583EA60031315A /* Screenshot-Home-without-Current.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
