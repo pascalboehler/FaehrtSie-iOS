@@ -42,7 +42,6 @@ struct FaehrtSie_iOSApp: App {
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
             if success {
                 print("All set!")
-                print(Utility.convertDateToDayNameString(Date.now))
             } else if let error = error {
                 print(error.localizedDescription)
             }

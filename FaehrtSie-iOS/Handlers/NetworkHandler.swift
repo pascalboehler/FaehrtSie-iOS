@@ -85,6 +85,7 @@ public class NetworkHandler : ObservableObject {
                     let departureDate = Date(timeIntervalSince1970: departure)
                     let arrivalDate = departureDate.addingTimeInterval(1200)
                     let journeyToAdd = Journey(name: "RESULT", departureTime: departureDate, departureStation: "Ernst-August-Schleuse", arrivalTime: arrivalDate, arrivalStation: "Landungsbrücken", mot: MoT(lineNum: 73, type: .Ferry, startPoint: "Ernst-August-Schleuse", endPoint: "Landungsbrücken", iconName: "Faehre73Logo"), isDelayed: false, delay: 0)
+                    responseJourney.append(journeyToAdd)
                 }
                 print("done without errors")
                 self.searchResults = responseJourney
