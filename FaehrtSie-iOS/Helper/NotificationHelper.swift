@@ -51,7 +51,7 @@ public class NotificationHelper {
             return
         }
         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: timeToTrigger.timeIntervalSince(Date.now) - 120.0, repeats: false) // trigger notifications 2 minutes prior to departure
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: timeToTrigger.timeIntervalSince(Date.now) - 900.0, repeats: false) // trigger notifications 2 minutes prior to departure
         
         let identifierString = "\(depStation)+\(timeToTrigger.timeIntervalSince1970)"
         
