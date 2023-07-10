@@ -16,4 +16,4 @@ Due to missing information about the exact schedule and any exceptions derivatin
 
 ## Copyright / Legal
 
-This project is licensed under the MIT License.
+This project is licensed under the GPLv3 (GNU General Public License v3) License.
