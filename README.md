@@ -16,10 +16,4 @@ Due to missing information about the exact schedule and any exceptions derivatin
 
 ## Copyright / Legal
 
-This project was created by Pascal Böhler (@pascalboehler) and is not meant to be distributed or submitted to the Apple App Store or other publication streams (like Mac App Download) by anyone else without written permission by the Creator. Additionally, any commercial use of this project is forbitten without permission by the Project Owner.
-
-Additionally, due to legal agreements with HVV it is not permitted to distribute this app in a paid only version, due to the condition that the provided data has to be available freely
-
-This app is and will be a code modified copy of *DIA - Do I arrive?* and will be available under the same conditions (if not mentioned otherwise down here).
-
-faehrtsie.de and other similiar names and trademarks are not owned by the creator of this project and might apply to different copyright and distribution conditions.
+This project is licensed under the MIT License.
